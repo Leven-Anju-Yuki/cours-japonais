@@ -75,22 +75,24 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    background-color: #ffffffb3;
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
+    margin: 20px 0;
+    font-size: 1em;
     text-align: center;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-tr:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  table thead {
+    background-color: #f7f7f7;
+  }
+  table th,
+  table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  table tr:hover {
     background-color: #f1f1f1;
-}
+  }
+
+
 td img {
     display: block;
     margin: 0 auto;
