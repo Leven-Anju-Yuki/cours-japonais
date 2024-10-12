@@ -50,149 +50,242 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
   </head>
-  <body>
+  <body class="animaux">
     <header>
-      <nav>
-        <ul>
-          <li><a href="./index.html">les polices</a></li>
-          <li><a href="./couleur.html">les couleurs</a></li>
-          <li><a href="./famille.html">les liens de familles</a></li>
-          <li><a href="./animaux.html">les animaux</a></li>
-          <li><a href="./nourriture.html">la nourriture</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="width: 10%; margin: 0% !important; padding: 0%" href="./index.html"
+            ><img style="width: 70%; margin: 0% !important" src="./assets/img/favicon.png" alt=""
+          /></a>
+          <!-- Menu Burger -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Liens de navigation -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Les Polices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./couleur.html">Les Couleurs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./famille.html">Les Liens de Famille</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./animaux.html">Les Animaux</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nourriture.html">La Nourriture</a>
+              </li>
+              <center>
+                <button class="btn-install ml-2" id="installButton" style="display: none">Installer</button>
+              </center>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
     <!-- Tableau des Animaux -->
-    <h1>Animaux en Japonais</h1>
-    <table>
-      <tr>
-        <th>Animal (Français ou Image)</th>
-        <th>Phonétique (Romaji)</th>
-        <th>Nom en Japonais (Katakana)</th>
-        <th>Nom en Japonais (Kanji)</th>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/chien.png" alt="Chien" style="width: 50px; height: 50px" />Chien</td>
-        <td>Inu</td>
-        <td>イヌ</td>
-        <td>犬</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/chat.png" alt="Chat" style="width: 50px; height: 50px" />Chat</td>
-        <td>Neko</td>
-        <td>ネコ</td>
-        <td>猫</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/oiseau.png" alt="Oiseau" style="width: 50px; height: 50px" />Oiseau</td>
-        <td>Tori</td>
-        <td>トリ</td>
-        <td>鳥</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/cheval.png" alt="Cheval" style="width: 50px; height: 50px" />Cheval</td>
-        <td>Uma</td>
-        <td>ウマ</td>
-        <td>馬</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/vache.png" alt="Vache" style="width: 50px; height: 50px" />Vache</td>
-        <td>Ushi</td>
-        <td>ウシ</td>
-        <td>牛</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/poisson.png" alt="Poisson" style="width: 50px; height: 50px" />Poisson</td>
-        <td>Sakana</td>
-        <td>サカナ</td>
-        <td>魚</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/lapin.png" alt="Lapin" style="width: 50px; height: 50px" />Lapin</td>
-        <td>Usagi</td>
-        <td>ウサギ</td>
-        <td>兎</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/tigre.png" alt="Tigre" style="width: 50px; height: 50px" />Tigre</td>
-        <td>Tora</td>
-        <td>トラ</td>
-        <td>虎</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/singe.png" alt="Singe" style="width: 50px; height: 50px" />Singe</td>
-        <td>Saru</td>
-        <td>サル</td>
-        <td>猿</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="../assets/img/animaux/elephant.png" alt="Éléphant" style="width: 50px; height: 50px" />Éléphant
-        </td>
-        <td>Zou</td>
-        <td>ゾウ</td>
-        <td>象</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/lion.png" alt="Lion" style="width: 50px; height: 50px" />Lion</td>
-        <td>Raion</td>
-        <td>ライオン</td>
-        <td>獅子</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/ours.png" alt="Ours" style="width: 50px; height: 50px" />Ours</td>
-        <td>Kuma</td>
-        <td>クマ</td>
-        <td>熊</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/renard.png" alt="Renard" style="width: 50px; height: 50px" />Renard</td>
-        <td>Kitsune</td>
-        <td>キツネ</td>
-        <td>狐</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/loup.png" alt="Loup" style="width: 50px; height: 50px" />Loup</td>
-        <td>Ookami</td>
-        <td>オオカミ</td>
-        <td>狼</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/panda.png" alt="Panda" style="width: 50px; height: 50px" />Panda</td>
-        <td>Panda</td>
-        <td>パンダ</td>
-        <td>熊猫</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="../assets/img/animaux/panda-roux.png" alt="Panda Roux" style="width: 50px; height: 50px" />Panda
-          Roux
-        </td>
-        <td>Shakunetsu panda</td>
-        <td>シャクネツパンダ</td>
-        <td>赤熊猫</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/girafe.png" alt="Girafe" style="width: 50px; height: 50px" />Girafe</td>
-        <td>Kirin</td>
-        <td>キリン</td>
-        <td>麒麟</td>
-      </tr>
-      <tr>
-        <td><img src="../assets/img/animaux/tortue.png" alt="Tortue" style="width: 50px; height: 50px" />Tortue</td>
-        <td>Kame</td>
-        <td>カメ</td>
-        <td>亀</td>
-      </tr>
-      <tr>
-        <td>
-          <img src="../assets/img/animaux/perroquet.png" alt="Perroquet" style="width: 50px; height: 50px" />Perroquet
-        </td>
-        <td>Oumu</td>
-        <td>オウム</td>
-        <td>鸚鵡</td>
-      </tr>
-    </table>
+    <div class="container">
+      <h1>Animaux en Japonais</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Inu">🔊</button>
+            <img src="../assets/img/animaux/chien.png" class="card-img-top" alt="Chien" />
+            <div class="card-body">
+              <h5 class="card-title">Chien</h5>
+              <p class="card-text">Katakana: イヌ</p>
+              <p class="card-text">Romaji: Inu</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Neko">🔊</button>
+            <img src="../assets/img/animaux/chat.png" class="card-img-top" alt="Chat" />
+            <div class="card-body">
+              <h5 class="card-title">Chat</h5>
+              <p class="card-text">Katakana: ネコ</p>
+              <p class="card-text">Romaji: Neko</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Tori">🔊</button>
+            <img src="../assets/img/animaux/oiseau.png" class="card-img-top" alt="Oiseau" />
+            <div class="card-body">
+              <h5 class="card-title">Oiseau</h5>
+              <p class="card-text">Katakana: トリ</p>
+              <p class="card-text">Romaji: Tori</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Uma">🔊</button>
+            <img src="../assets/img/animaux/cheval.png" class="card-img-top" alt="Cheval" />
+            <div class="card-body">
+              <h5 class="card-title">Cheval</h5>
+              <p class="card-text">Katakana: ウマ</p>
+              <p class="card-text">Romaji: Uma</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Ushi">🔊</button>
+            <img src="../assets/img/animaux/vache.png" class="card-img-top" alt="Vache" />
+            <div class="card-body">
+              <h5 class="card-title">Vache</h5>
+              <p class="card-text">Katakana: ウシ</p>
+              <p class="card-text">Romaji: Ushi</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Sakana">🔊</button>
+            <img src="../assets/img/animaux/poisson.png" class="card-img-top" alt="Poisson" />
+            <div class="card-body">
+              <h5 class="card-title">Poisson</h5>
+              <p class="card-text">Katakana: サカナ</p>
+              <p class="card-text">Romaji: Sakana</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Usagi">🔊</button>
+            <img src="../assets/img/animaux/lapin.png" class="card-img-top" alt="Lapin" />
+            <div class="card-body">
+              <h5 class="card-title">Lapin</h5>
+              <p class="card-text">Katakana: ウサギ</p>
+              <p class="card-text">Romaji: Usagi</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Tora">🔊</button>
+            <img src="../assets/img/animaux/tigre.png" class="card-img-top" alt="Tigre" />
+            <div class="card-body">
+              <h5 class="card-title">Tigre</h5>
+              <p class="card-text">Katakana: トラ</p>
+              <p class="card-text">Romaji: Tora</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Zou">🔊</button>
+            <img src="../assets/img/animaux/elephant.png" class="card-img-top" alt="Éléphant" />
+            <div class="card-body">
+              <h5 class="card-title">Éléphant</h5>
+              <p class="card-text">Katakana: ゾウ</p>
+              <p class="card-text">Romaji: Zou</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Raion">🔊</button>
+            <img src="../assets/img/animaux/lion.png" class="card-img-top" alt="Lion" />
+            <div class="card-body">
+              <h5 class="card-title">Lion</h5>
+              <p class="card-text">Katakana: ライオン</p>
+              <p class="card-text">Romaji: Raion</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Kuma">🔊</button>
+            <img src="../assets/img/animaux/ours.png" class="card-img-top" alt="Ours" />
+            <div class="card-body">
+              <h5 class="card-title">Ours</h5>
+              <p class="card-text">Katakana: クマ</p>
+              <p class="card-text">Romaji: Kuma</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Kitsune">🔊</button>
+            <img src="../assets/img/animaux/renard.png" class="card-img-top" alt="Renard" />
+            <div class="card-body">
+              <h5 class="card-title">Renard</h5>
+              <p class="card-text">Katakana: キツネ</p>
+              <p class="card-text">Romaji: Kitsune</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Ookami">🔊</button>
+            <img src="../assets/img/animaux/loup.png" class="card-img-top" alt="Loup" />
+            <div class="card-body">
+              <h5 class="card-title">Loup</h5>
+              <p class="card-text">Katakana: オオカミ</p>
+              <p class="card-text">Romaji: Ookami</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Saru">🔊</button>
+            <img src="../assets/img/animaux/singe.png" class="card-img-top" alt="Singe" />
+            <div class="card-body">
+              <h5 class="card-title">Singe</h5>
+              <p class="card-text">Katakana: サル</p>
+              <p class="card-text">Romaji: Saru</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+      .card-img-top {
+        object-fit: cover; /* Pour éviter la déformation de l'image */
+        display: block;
+        margin: 0 auto;
+        width: 100px !important;
+        height: 100px !important;
+      }
+
+      .bg-light {
+        background: transparent !important;
+      }
+    </style>
   </body>
 </html>

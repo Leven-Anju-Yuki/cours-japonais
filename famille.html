@@ -39,43 +39,50 @@
     <!-- Fichiers CSS pour le style du site -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-    <style>
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-        font-size: 1em;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      table thead {
-        background-color: #f7f7f7;
-      }
-      table th,
-      table td {
-        padding: 12px 15px;
-        border: 1px solid #ddd;
-      }
-      table tr:hover {
-        background-color: #f1f1f1;
-      }
-      h1 {
-        text-align: center;
-        color: #333;
-        margin-top: 20px;
-      }
-    </style>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="./index.html">les polices</a></li>
-          <li><a href="./couleur.html">les couleurs</a></li>
-          <li><a href="./famille.html">les liens de familles</a></li>
-          <li><a href="./animaux.html">les animaux</a></li>
-          <li><a href="./nourriture.html">la nourriture</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="width: 10%; margin: 0% !important; padding: 0%" href="./index.html"
+            ><img style="width: 70%; margin: 0% !important" src="./assets/img/favicon.png" alt=""
+          /></a>
+          <!-- Menu Burger -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Liens de navigation -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Les Polices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./couleur.html">Les Couleurs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./famille.html">Les Liens de Famille</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./animaux.html">Les Animaux</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nourriture.html">La Nourriture</a>
+              </li>
+              <center>
+                <button class="btn-install ml-2" id="installButton" style="display: none">Installer</button>
+              </center>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -177,5 +184,10 @@
         </tr>
       </tbody>
     </table>
+    <style>
+      .bg-light {
+        background: transparent !important;
+      }
+    </style>
   </body>
 </html>

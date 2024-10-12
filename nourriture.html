@@ -50,16 +50,49 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
   </head>
-  <body>
+  <body class="">
     <header>
-      <nav>
-        <ul>
-          <li><a href="./index.html">les polices</a></li>
-          <li><a href="./couleur.html">les couleurs</a></li>
-          <li><a href="./famille.html">les liens de familles</a></li>
-          <li><a href="./animaux.html">les animaux</a></li>
-          <li><a href="./nourriture.html">la nourriture</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="width: 10%; margin: 0% !important; padding: 0%" href="./index.html"
+            ><img style="width: 70%; margin: 0% !important" src="./assets/img/favicon.png" alt=""
+          /></a>
+          <!-- Menu Burger -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Liens de navigation -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Les Polices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./couleur.html">Les Couleurs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./famille.html">Les Liens de Famille</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./animaux.html">Les Animaux</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nourriture.html">La Nourriture</a>
+              </li>
+              <center>
+                <button class="btn-install ml-2" id="installButton" style="display: none">Installer</button>
+              </center>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -72,6 +105,7 @@
       <div class="row">
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="maguro">🔊</button>
             <img src="./assets/img/nourriture/sushi thon.jpg" class="card-img-top" alt="Thon" />
             <div class="card-body">
               <h5 class="card-title">Thon</h5>
@@ -83,6 +117,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Sāmon">🔊</button>
             <img src="./assets/img/nourriture/sushi-saumon.jpg" class="card-img-top" alt="Saumon" />
             <div class="card-body">
               <h5 class="card-title">Saumon</h5>
@@ -94,6 +129,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Ebi">🔊</button>
             <img src="./assets/img/nourriture/sushi crevette.jpg" class="card-img-top" alt="Crevette" />
             <div class="card-body">
               <h5 class="card-title">Crevette</h5>
@@ -105,6 +141,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Unagi">🔊</button>
             <img src="./assets/img/nourriture/sushi-anguille.png" class="card-img-top" alt="Anguille" />
             <div class="card-body">
               <h5 class="card-title">Anguille</h5>
@@ -116,6 +153,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Tako">🔊</button>
             <img src="./assets/img/nourriture/sushi poulpe.jpg" class="card-img-top" alt="Poulpe" />
             <div class="card-body">
               <h5 class="card-title">Poulpe</h5>
@@ -127,6 +165,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Ika">🔊</button>
             <img src="./assets/img/nourriture/sushi seiche.jpg" class="card-img-top" alt="Seiche" />
             <div class="card-body">
               <h5 class="card-title">Seiche</h5>
@@ -138,6 +177,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Hotate">🔊</button>
             <img src="./assets/img/nourriture/sushi-saint-jacques.png" class="card-img-top" alt="Saint Jacques" />
             <div class="card-body">
               <h5 class="card-title">Saint Jacques</h5>
@@ -149,6 +189,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Tamagoyaki">🔊</button>
             <img src="./assets/img/nourriture/sushi omelettes.jpg" class="card-img-top" alt="Omelette" />
             <div class="card-body">
               <h5 class="card-title">Omelette</h5>
@@ -160,6 +201,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Hirame">🔊</button>
             <img src="./assets/img/nourriture/sushi daurade.jpg" class="card-img-top" alt="Daurade" />
             <div class="card-body">
               <h5 class="card-title">Daurade</h5>
@@ -171,6 +213,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Abokado">🔊</button>
             <img src="./assets/img/nourriture/sushi avocat.png" class="card-img-top" alt="Avocat" />
             <div class="card-body">
               <h5 class="card-title">Avocat</h5>
@@ -181,11 +224,12 @@
           </div>
         </div>
       </div>
-      
+
       <h3 class="my-4">Maki</h3>
       <div class="row">
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Maguro Maki">🔊</button>
             <img src="./assets/img/nourriture/maki thon.jfif" class="card-img-top" alt="Maki Thon" />
             <div class="card-body">
               <h5 class="card-title">Maki Thon</h5>
@@ -197,6 +241,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Sāmon Maki">🔊</button>
             <img src="./assets/img/nourriture/maki saumon.jpeg" class="card-img-top" alt="Maki Saumon" />
             <div class="card-body">
               <h5 class="card-title">Maki Saumon</h5>
@@ -208,6 +253,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation=" Kappa Maki">🔊</button>
             <img src="./assets/img/nourriture/maki-radis-marines.jpg" class="card-img-top" alt="Maki Radis marinées" />
             <div class="card-body">
               <h5 class="card-title">Maki Radis marinées</h5>
@@ -219,6 +265,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Sāmon to Abokado Maki">🔊</button>
             <img src="./assets/img/nourriture/maki-saumon-avocat.jpg" class="card-img-top" alt="Maki Saumon Avocat" />
             <div class="card-body">
               <h5 class="card-title">Maki Saumon Avocat</h5>
@@ -230,6 +277,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Kyūri Maki">🔊</button>
             <img src="./assets/img/nourriture/maki concomber.png" class="card-img-top" alt="Maki Concombre" />
             <div class="card-body">
               <h5 class="card-title">Maki Concombre</h5>
@@ -241,6 +289,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Abokado Maki">🔊</button>
             <img src="./assets/img/nourriture/Makis-avocat.png" class="card-img-top" alt="Maki Avocat" />
             <div class="card-body">
               <h5 class="card-title">Maki Avocat</h5>
@@ -252,6 +301,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Ebi Tenpura Maki">🔊</button>
             <img src="./assets/img/nourriture/Maki-tempura.jpg" class="card-img-top" alt="Maki Tempura" />
             <div class="card-body">
               <h5 class="card-title">Maki Tempura</h5>
@@ -262,201 +312,366 @@
           </div>
         </div>
       </div>
+      <h3 class="my-4">Onigiri</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Shaké Onigiri">🔊</button>
+            <img src="./assets/img/nourriture/onigiri_saumon.webp" class="card-img-top" alt="Shaké Onigiri" />
+            <div class="card-body">
+              <h5 class="card-title">Onigiri au saumon</h5>
+              <p class="card-text">Katakana: サケおにぎり</p>
+              <p class="card-text">Romaji: Shaké Onigiri</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Umeboshi Onigiri">🔊</button>
+            <img src="./assets/img/nourriture/Onigiri Umeboshi.jpg" class="card-img-top" alt="Umeboshi Onigiri" />
+            <div class="card-body">
+              <h5 class="card-title">Onigiri à la prune</h5>
+              <p class="card-text">Katakana: ウメボシおにぎり</p>
+              <p class="card-text">Romaji: Umeboshi Onigiri</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Tuna Mayo Onigiri">🔊</button>
+            <img src="./assets/img/nourriture/OnigiriThonMayo.jpg" class="card-img-top" alt="Tuna Mayo Onigiri" />
+            <div class="card-body">
+              <h5 class="card-title">Onigiri au thon mayo</h5>
+              <p class="card-text">Katakana: ツナマヨおにぎり</p>
+              <p class="card-text">Romaji: Tuna Mayo Onigiri</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Okaka Onigiri">🔊</button>
+            <img src="./assets/img/nourriture/Onigiri au katsuobushi.webp" class="card-img-top" alt="Okaka Onigiri" />
+            <div class="card-body">
+              <h5 class="card-title">Onigiri à la bonite séchée</h5>
+              <p class="card-text">Katakana: オカカおにぎり</p>
+              <p class="card-text">Romaji: Okaka Onigiri</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Konbu Onigiri">🔊</button>
+            <img src="./assets/img/nourriture/onigiri-kombu.jpg" class="card-img-top" alt="Konbu Onigiri" />
+            <div class="card-body">
+              <h5 class="card-title">Onigiri au konbu</h5>
+              <p class="card-text">Katakana: コンブおにぎり</p>
+              <p class="card-text">Romaji: Konbu Onigiri</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Yaki Onigiri">🔊</button>
+            <img src="./assets/img/nourriture/onigiri yaki.jpg" class="card-img-top" alt="Yaki Onigiri Nature" />
+            <div class="card-body">
+              <h5 class="card-title">Yaki Onigiri Nature</h5>
+              <p class="card-text">Katakana: 焼きおにぎり</p>
+              <p class="card-text">Romaji: Yaki Onigiri</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <h3 class="my-4">Sashimi</h3>
-<div class="row">
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/sahimi saumon.jpg" class="card-img-top" alt="Sashimi Saumon" />
-      <div class="card-body">
-        <h5 class="card-title">Sashimi Saumon</h5>
-        <p class="card-text">Katakana: サーモン刺身</p>
-        <p class="card-text">Kanji: 鮭刺身</p>
-        <p class="card-text">Romaji: Sāmon Sashimi</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Sāmon sashimi">🔊</button>
+            <img src="./assets/img/nourriture/sahimi saumon.jpg" class="card-img-top" alt="Sashimi Saumon" />
+            <div class="card-body">
+              <h5 class="card-title">Sashimi Saumon</h5>
+              <p class="card-text">Katakana: サーモン刺身</p>
+              <p class="card-text">Kanji: 鮭刺身</p>
+              <p class="card-text">Romaji: Sāmon Sashimi</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Maguro Sashimi">🔊</button>
+            <img src="./assets/img/nourriture/SASHIMI-THON-ROUGE.webp" class="card-img-top" alt="Sashimi Thon" />
+            <div class="card-body">
+              <h5 class="card-title">Sashimi Thon</h5>
+              <p class="card-text">Katakana: マグロ刺身</p>
+              <p class="card-text">Kanji: 鮪刺身</p>
+              <p class="card-text">Romaji: Maguro Sashimi</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Hirame Sashimi">🔊</button>
+            <img src="./assets/img/nourriture/sashimi-daurade.jpg" class="card-img-top" alt="Sashimi Daurade" />
+            <div class="card-body">
+              <h5 class="card-title">Daurade</h5>
+              <p class="card-text">Katakana: ヒラメ</p>
+              <p class="card-text">Kanji: 鰈</p>
+              <p class="card-text">Romaji: Hirame Sashimi</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Tako Sashimi">🔊</button>
+            <img src="./assets/img/nourriture/sashimi poulpe.jpg" class="card-img-top" alt="Sashimi Poulpe" />
+            <div class="card-body">
+              <h5 class="card-title">Sashimi Poulpe</h5>
+              <p class="card-text">Katakana: タコ刺身</p>
+              <p class="card-text">Kanji: 蛸刺身</p>
+              <p class="card-text">Romaji: Tako Sashimi</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Ebi Sashimi">🔊</button>
+            <img src="./assets/img/nourriture/sashimi crevette.jpeg" class="card-img-top" alt="Sashimi Crevettes" />
+            <div class="card-body">
+              <h5 class="card-title">Sashimi Crevettes</h5>
+              <p class="card-text">Katakana: エビ刺身</p>
+              <p class="card-text">Kanji: 蝦刺身</p>
+              <p class="card-text">Romaji: Ebi Sashimi</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Unagi Sashimi">🔊</button>
+            <img src="./assets/img/nourriture/sashimi d'anguilles.jpg" class="card-img-top" alt="Sashimi d'Anguilles" />
+            <div class="card-body">
+              <h5 class="card-title">Sashimi d'Anguilles</h5>
+              <p class="card-text">Katakana: ウナギ刺身</p>
+              <p class="card-text">Kanji: 鰻刺身</p>
+              <p class="card-text">Romaji: Unagi Sashimi</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Ika Sashimi">🔊</button>
+            <img src="./assets/img/nourriture/sashimi seiche.jpg" class="card-img-top" alt="Sashimi de Seiche" />
+            <div class="card-body">
+              <h5 class="card-title">Sashimi de Seiche</h5>
+              <p class="card-text">Katakana: イカ刺身</p>
+              <p class="card-text">Kanji: 烏賊刺身</p>
+              <p class="card-text">Romaji: Ika Sashimi</p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/SASHIMI-THON-ROUGE.webp" class="card-img-top" alt="Sashimi Thon" />
-      <div class="card-body">
-        <h5 class="card-title">Sashimi Thon</h5>
-        <p class="card-text">Katakana: マグロ刺身</p>
-        <p class="card-text">Kanji: 鮪刺身</p>
-        <p class="card-text">Romaji: Maguro Sashimi</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/sashimi-daurade.jpg" class="card-img-top" alt="Sashimi Daurade" />
-      <div class="card-body">
-        <h5 class="card-title">Sashimi Daurade</h5>
-        <p class="card-text">Katakana: 鯛刺身</p>
-        <p class="card-text">Kanji: 鯛刺身</p>
-        <p class="card-text">Romaji: Tai Sashimi</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/sashimi poulpe.jpg" class="card-img-top" alt="Sashimi Poulpe" />
-      <div class="card-body">
-        <h5 class="card-title">Sashimi Poulpe</h5>
-        <p class="card-text">Katakana: タコ刺身</p>
-        <p class="card-text">Kanji: 蛸刺身</p>
-        <p class="card-text">Romaji: Tako Sashimi</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/sashimi crevette.jpeg" class="card-img-top" alt="Sashimi Crevettes" />
-      <div class="card-body">
-        <h5 class="card-title">Sashimi Crevettes</h5>
-        <p class="card-text">Katakana: エビ刺身</p>
-        <p class="card-text">Kanji: 蝦刺身</p>
-        <p class="card-text">Romaji: Ebi Sashimi</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/sashimi d'anguilles.jpg" class="card-img-top" alt="Sashimi d'Anguilles" />
-      <div class="card-body">
-        <h5 class="card-title">Sashimi d'Anguilles</h5>
-        <p class="card-text">Katakana: ウナギ刺身</p>
-        <p class="card-text">Kanji: 鰻刺身</p>
-        <p class="card-text">Romaji: Unagi Sashimi</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/sashimi seiche.jpg" class="card-img-top" alt="Sashimi de Seiche" />
-      <div class="card-body">
-        <h5 class="card-title">Sashimi de Seiche</h5>
-        <p class="card-text">Katakana: イカ刺身</p>
-        <p class="card-text">Kanji: 烏賊刺身</p>
-        <p class="card-text">Romaji: Ika Sashimi</p>
-      </div>
-    </div>
-  </div>
-</div>
 
       <!-- Section pour les Plats Japonais -->
       <h2 class="my-4">Plats Japonais</h2>
-<div class="row">
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/Soupe-miso.webp" class="card-img-top" alt="Soupe Miso" />
-      <div class="card-body">
-        <h5 class="card-title">Soupe Miso</h5>
-        <p class="card-text">Katakana: 味噌汁</p>
-        <p class="card-text">Romaji: Miso Shiru</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/Poulet-frit-japonais-karaage.jpg" class="card-img-top" alt="Poulet Karaage" />
-      <div class="card-body">
-        <h5 class="card-title">Poulet Karaage</h5>
-        <p class="card-text">Katakana: 唐揚げ</p>
-        <p class="card-text">Romaji: Karaage</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/nouilles saute.jpg" class="card-img-top" alt="Nouilles Sautées" />
-      <div class="card-body">
-        <h5 class="card-title">Nouilles Sautées</h5>
-        <p class="card-text">Katakana: 焼きそば</p>
-        <p class="card-text">Romaji: Yakisoba</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/okonomiyaki.jpg" class="card-img-top" alt="Okonomiyaki" />
-      <div class="card-body">
-        <h5 class="card-title">Okonomiyaki</h5>
-        <p class="card-text">Katakana: お好み焼き</p>
-        <p class="card-text">Romaji: Okonomiyaki</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/tempura.jpg" class="card-img-top" alt="Tempura" />
-      <div class="card-body">
-        <h5 class="card-title">Tempura</h5>
-        <p class="card-text">Katakana: 天ぷら</p>
-        <p class="card-text">Romaji: Tempura</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/gyoza.jpg" class="card-img-top" alt="Gyoza" />
-      <div class="card-body">
-        <h5 class="card-title">Gyoza</h5>
-        <p class="card-text">Katakana: 餃子</p>
-        <p class="card-text">Romaji: Gyoza</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/sukiyaki.jpg" class="card-img-top" alt="Sukiyaki" />
-      <div class="card-body">
-        <h5 class="card-title">Sukiyaki</h5>
-        <p class="card-text">Katakana: すき焼き</p>
-        <p class="card-text">Romaji: Sukiyaki</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/ramen.jpg" class="card-img-top" alt="Ramen" />
-      <div class="card-body">
-        <h5 class="card-title">Ramen</h5>
-        <p class="card-text">Katakana: ラーメン</p>
-        <p class="card-text">Romaji: Rāmen</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/tamagoyaki.jpg" class="card-img-top" alt="Roulée d'omelette" />
-      <div class="card-body">
-        <h5 class="card-title">Roulée d'omelette</h5>
-        <p class="card-text">Katakana: 玉子焼き</p>
-        <p class="card-text">Romaji: Tamagoyaki</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card">
-      <img src="./assets/img/nourriture/takoyaki.webp" class="card-img-top" alt="Takoyaki" />
-      <div class="card-body">
-        <h5 class="card-title">Takoyaki</h5>
-        <p class="card-text">Katakana: たこ焼き</p>
-        <p class="card-text">Romaji: Takoyaki</p>
-      </div>
-    </div>
-  </div>
-</div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Miso Shiru">🔊</button>
+            <img src="./assets/img/nourriture/Soupe-miso.webp" class="card-img-top" alt="Soupe Miso" />
+            <div class="card-body">
+              <h5 class="card-title">Soupe Miso</h5>
+              <p class="card-text">Katakana: 味噌汁</p>
+              <p class="card-text">Romaji: Miso Shiru</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Karaage">🔊</button>
+            <img
+              src="./assets/img/nourriture/Poulet-frit-japonais-karaage.jpg"
+              class="card-img-top"
+              alt="Poulet Karaage"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Poulet Karaage</h5>
+              <p class="card-text">Katakana: 唐揚げ</p>
+              <p class="card-text">Romaji: Karaage</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Yakisoba">🔊</button>
+            <img src="./assets/img/nourriture/nouilles saute.jpg" class="card-img-top" alt="Nouilles Sautées" />
+            <div class="card-body">
+              <h5 class="card-title">Nouilles Sautées</h5>
+              <p class="card-text">Katakana: 焼きそば</p>
+              <p class="card-text">Romaji: Yakisoba</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Okonomiyaki">🔊</button>
+            <img src="./assets/img/nourriture/okonomiyaki.jpg" class="card-img-top" alt="Okonomiyaki" />
+            <div class="card-body">
+              <h5 class="card-title">Okonomiyaki</h5>
+              <p class="card-text">Katakana: お好み焼き</p>
+              <p class="card-text">Romaji: Okonomiyaki</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Tempura">🔊</button>
+            <img src="./assets/img/nourriture/tempura.jpg" class="card-img-top" alt="Tempura" />
+            <div class="card-body">
+              <h5 class="card-title">Tempura</h5>
+              <p class="card-text">Katakana: 天ぷら</p>
+              <p class="card-text">Romaji: Tempura</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Gyoza">🔊</button>
+            <img src="./assets/img/nourriture/gyoza.jpg" class="card-img-top" alt="Gyoza" />
+            <div class="card-body">
+              <h5 class="card-title">Gyoza</h5>
+              <p class="card-text">Katakana: 餃子</p>
+              <p class="card-text">Romaji: Gyoza</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Sukiyaki">🔊</button>
+            <img src="./assets/img/nourriture/sukiyaki.jpg" class="card-img-top" alt="Sukiyaki" />
+            <div class="card-body">
+              <h5 class="card-title">Sukiyaki</h5>
+              <p class="card-text">Katakana: すき焼き</p>
+              <p class="card-text">Romaji: Sukiyaki</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Rāmen">🔊</button>
+            <img src="./assets/img/nourriture/ramen.jpg" class="card-img-top" alt="Ramen" />
+            <div class="card-body">
+              <h5 class="card-title">Ramen</h5>
+              <p class="card-text">Katakana: ラーメン</p>
+              <p class="card-text">Romaji: Rāmen</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Tamagoyaki">🔊</button>
+            <img src="./assets/img/nourriture/tamagoyaki.jpg" class="card-img-top" alt="Roulée d'omelette" />
+            <div class="card-body">
+              <h5 class="card-title">Roulée d'omelette</h5>
+              <p class="card-text">Katakana: 玉子焼き</p>
+              <p class="card-text">Romaji: Tamagoyaki</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Takoyaki">🔊</button>
+            <img src="./assets/img/nourriture/takoyaki.webp" class="card-img-top" alt="Takoyaki" />
+            <div class="card-body">
+              <h5 class="card-title">Takoyaki</h5>
+              <p class="card-text">Katakana: たこ焼き</p>
+              <p class="card-text">Romaji: Takoyaki</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Kare raisu">🔊</button>
+            <img src="./assets/img/nourriture/curry-japonais.jpeg" class="card-img-top" alt="Curry japonais" />
+            <div class="card-body">
+              <h5 class="card-title">Curry japonais</h5>
+              <p class="card-text">Katakana: カレーライス</p>
+              <p class="card-text">Romaji: Kare raisu</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Tofu">🔊</button>
+            <img src="./assets/img/nourriture/tofu.jpg" class="card-img-top" alt="Tofu" />
+            <div class="card-body">
+              <h5 class="card-title">Tofu</h5>
+              <p class="card-text">Katakana: トーフ</p>
+              <p class="card-text">Romaji: Tōfu</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Natto">🔊</button>
+            <img src="./assets/img/nourriture/natto.webp" class="card-img-top" alt="Natto" />
+            <div class="card-body">
+              <h5 class="card-title">Natto</h5>
+              <p class="card-text">Katakana: 納豆</p>
+              <p class="card-text">Romaji: Natto</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Matcha">🔊</button>
+            <img src="./assets/img/nourriture/matcha.webp" class="card-img-top" alt="Matcha" />
+            <div class="card-body">
+              <h5 class="card-title">Matcha</h5>
+              <p class="card-text">Katakana: 抹茶</p>
+              <p class="card-text">Romaji: Matcha</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Dorayaki">🔊</button>
+            <img src="./assets/img/nourriture/dorayaki.jpg" class="card-img-top" alt="Dorayaki" />
+            <div class="card-body">
+              <h5 class="card-title">Dorayaki</h5>
+              <p class="card-text">Katakana: どら焼き</p>
+              <p class="card-text">Romaji: Dorayaki</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <button class="btn-listen nourriture-btn-listen" data-pronunciation="Zoni">🔊</button>
+            <img src="./assets/img/nourriture/zoni.jpg" class="card-img-top" alt="Zoni" />
+            <div class="card-body">
+              <h5 class="card-title">Zoni</h5>
+              <p class="card-text">Katakana: 雑煮</p>
+              <p class="card-text">Romaji: Zoni</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <style>
-      .card-img-top { display: block;
+      .card-img-top {
+        display: block;
         margin: 0 auto;
-        width: 200px !important;
-        height: 200px !important;
+        object-fit: cover; /* Pour éviter la déformation de l'image */
+
+        width: 150px !important;
+        height: 150px !important;
+      }
+      .bg-light {
+        background: transparent !important;
       }
     </style>
+    <script src="./assets/js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
