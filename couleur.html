@@ -79,6 +79,10 @@
               <li class="nav-item">
                 <a class="nav-link" href="./nourriture.html">La Nourriture</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./politesse.html">Les formules de politesses</a>
+              </li>
+
               <center>
                 <button class="btn-install ml-2" id="installButton" style="display: none">Installer</button>
               </center>
@@ -93,122 +97,128 @@
       <tr>
         <th>Couleur (Français)</th>
         <th>Phonétique (Romaji)</th>
-        <th>Nom en Japonais (Katakana)</th>
-        <th>Nom en Japonais (Kanji)</th>
+        <th>Katakana</th>
+        <th>Kanji</th>
       </tr>
       <tr>
         <td class="color-block red">Rouge</td>
-        <td>Aka</td>
+        <td>Aka <button class="btn-listen" data-pronunciation="Aka">🔊</button></td>
         <td>アカ</td>
         <td>赤</td>
       </tr>
       <tr>
         <td class="color-block blue">Bleu</td>
-        <td>Ao</td>
+        <td>Ao <button class="btn-listen" data-pronunciation="ao">🔊</button></td>
         <td>アオ</td>
         <td>青</td>
       </tr>
       <tr>
         <td class="color-block green">Vert</td>
-        <td>Midori</td>
+        <td>Midori <button class="btn-listen" data-pronunciation="midori">🔊</button></td>
         <td>ミドリ</td>
         <td>緑</td>
       </tr>
       <tr>
         <td class="color-block yellow">Jaune</td>
-        <td>Ki-iro</td>
+        <td>Ki-iro <button class="btn-listen" data-pronunciation="ki-iro">🔊</button></td>
         <td>キイロ</td>
         <td>黄</td>
       </tr>
       <tr>
         <td class="color-block pink">Rose</td>
-        <td>Pinku</td>
+        <td>Pinku <button class="btn-listen" data-pronunciation="pinku">🔊</button></td>
         <td>ピンク</td>
         <td>桃色</td>
       </tr>
       <tr>
         <td class="color-block black">Noir</td>
-        <td>Kuro</td>
+        <td>Kuro <button class="btn-listen" data-pronunciation="kuro">🔊</button></td>
         <td>クロ</td>
         <td>黒</td>
       </tr>
       <!-- Couleurs supplémentaires -->
       <tr>
         <td class="color-block orange">Orange</td>
-        <td>Orenji</td>
+        <td>Orenji <button class="btn-listen" data-pronunciation="Orenji">🔊</button></td>
         <td>オレンジ</td>
         <td>橙</td>
       </tr>
       <tr>
         <td class="color-block purple">Violet</td>
-        <td>Murasaki</td>
+        <td>Murasaki <button class="btn-listen" data-pronunciation="Murasaki">🔊</button></td>
         <td>ムラサキ</td>
         <td>紫</td>
       </tr>
       <tr>
         <td class="color-block brown">Marron</td>
-        <td>Chairo</td>
+        <td>Chairo <button class="btn-listen" data-pronunciation="Chairo">🔊</button></td>
         <td>チャイロ</td>
         <td>茶色</td>
       </tr>
       <tr>
         <td class="color-block grey">Gris</td>
-        <td>Haiiro</td>
+        <td>Haiiro <button class="btn-listen" data-pronunciation="Haiiro">🔊</button></td>
         <td>ハイイロ</td>
         <td>灰色</td>
       </tr>
       <tr>
         <td class="color-block white">Blanc</td>
-        <td>Shiro</td>
+        <td>Shiro <button class="btn-listen" data-pronunciation="Shiro">🔊</button></td>
         <td>シロ</td>
         <td>白</td>
       </tr>
       <tr>
         <td class="color-block cyan">Cyan</td>
-        <td>Shian</td>
+        <td>Shian <button class="btn-listen" data-pronunciation="Shian">🔊</button></td>
         <td>シアン</td>
         <td>シアン</td>
       </tr>
       <tr>
         <td class="color-block magenta">Magenta</td>
-        <td>Majenta</td>
+        <td>Majenta <button class="btn-listen" data-pronunciation="Majenta">🔊</button></td>
         <td>マゼンタ</td>
         <td>マゼンタ</td>
       </tr>
       <tr>
         <td class="color-block lime">Citron Vert</td>
-        <td>Raimu</td>
+        <td>Raimu <button class="btn-listen" data-pronunciation="Raimu">🔊</button></td>
         <td>ライム</td>
         <td>ライム</td>
       </tr>
       <tr>
         <td class="color-block teal">Sarcelle</td>
-        <td>Teeru</td>
+        <td>Teeru <button class="btn-listen" data-pronunciation="Teeru">🔊</button></td>
         <td>ティール</td>
         <td>ティール</td>
       </tr>
       <tr>
         <td class="color-block maroon">Bordeaux</td>
-        <td>Maroon</td>
+        <td>Maroon <button class="btn-listen" data-pronunciation="Maroon">🔊</button></td>
         <td>マルーン</td>
         <td>マルーン</td>
       </tr>
       <tr>
         <td class="color-block navy">Marine</td>
-        <td>Nevi</td>
+        <td>Nevi <button class="btn-listen" data-pronunciation="Nevi">🔊</button></td>
         <td>ネヴィ</td>
         <td>ネヴィ</td>
       </tr>
       <tr>
         <td class="color-block olive">Olive</td>
-        <td>Oribu</td>
+        <td>Oribu <button class="btn-listen" data-pronunciation="Oribu">🔊</button></td>
         <td>オリーブ</td>
         <td>オリーブ</td>
       </tr>
     </table>
-  </body>  <style>
+  </body>
+  <style>
     .bg-light {
       background: transparent !important;
     }
   </style>
+  <script src="./assets/js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>
