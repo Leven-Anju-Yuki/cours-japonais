@@ -59,7 +59,7 @@ if ('speechSynthesis' in window) {
   // Vérifier si les voix sont chargées
   if (window.speechSynthesis.getVoices().length === 0) {
     window.speechSynthesis.onvoiceschanged = () => {
-      console.log('Voices loaded');
+      console.log('Voix chargé');
     };
   }
 } else {
