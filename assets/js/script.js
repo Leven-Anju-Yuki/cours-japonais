@@ -1,46 +1,55 @@
 // Vérifier si le navigateur supporte l'API Web Speech
-if ('speechSynthesis' in window) {
-  // Fonction pour vérifier si le son est actif
-  function checkAudioContext() {
-    return new Promise((resolve) => {
-      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-      const oscillator = audioContext.createOscillator();
-      const gainNode = audioContext.createGain();
+if ("speechSynthesis" in window) {
+  // Fonction pour vérifier si le son est actif ou si l'appareil est en mode silencieux
+  async function isDeviceMuted() {
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    let isMuted = false;
 
-      oscillator.connect(gainNode);
-      gainNode.connect(audioContext.destination);
-      oscillator.start(0);
-      oscillator.stop(0.1);
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
 
-      gainNode.gain.setValueAtTime(0, audioContext.currentTime + 0.1);
+    gainNode.gain.setValueAtTime(0.01, audioContext.currentTime); // Volume très faible pour tester
+    oscillator.start(0);
+    oscillator.stop(0.1);
 
-      audioContext.resume().then(() => {
-        const state = audioContext.state; // Vérifie l'état de l'AudioContext
-        audioContext.close();
-        resolve(state === 'running');
-      });
-    });
+    try {
+      await audioContext.resume(); // Essayer de jouer le son
+      await new Promise((resolve) => setTimeout(resolve, 100)); // Attendre que le son soit produit
+      const audioLevel = audioContext.baseLatency; // Vérifier la latence comme approximation
+      isMuted = audioLevel === 0; // Si aucune latence détectée, probablement muet
+    } catch (err) {
+      console.warn("Erreur lors de la vérification du son :", err);
+    }
+
+    oscillator.disconnect();
+    gainNode.disconnect();
+    audioContext.close();
+    return isMuted;
   }
 
   // Fonction pour lire un texte en japonais
   function speak(text) {
-    checkAudioContext().then((isAudioActive) => {
-      if (!isAudioActive) {
-        alert('Le son de votre appareil semble désactivé. Veuillez vérifier vos paramètres audio.');
+    isDeviceMuted().then((isMuted) => {
+      if (isMuted) {
+        alert(
+          "Le son de votre appareil semble être désactivé ou en mode muet. Veuillez vérifier vos paramètres audio."
+        );
         return;
       }
 
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'ja-JP'; // Définit la langue à Japonais
+      utterance.lang = "ja-JP"; // Définit la langue à Japonais
 
       // Vérifier si des voix sont disponibles
       const availableVoices = window.speechSynthesis.getVoices();
-      const japaneseVoice = availableVoices.find(voice => voice.lang === 'ja-JP');
+      const japaneseVoice = availableVoices.find((voice) => voice.lang === "ja-JP");
 
       if (japaneseVoice) {
         utterance.voice = japaneseVoice; // Utiliser une voix japonaise si disponible
       } else {
-        console.warn('Voix japonaise non disponible, lecture avec une voix par défaut.');
+        console.warn("Voix japonaise non disponible, lecture avec une voix par défaut.");
       }
 
       // Lecture de la voix
@@ -49,9 +58,9 @@ if ('speechSynthesis' in window) {
   }
 
   // Ajouter des événements d'écoute à chaque bouton
-  document.querySelectorAll('.btn-listen').forEach(button => {
-    button.addEventListener('click', function () {
-      const pronunciation = this.getAttribute('data-pronunciation');
+  document.querySelectorAll(".btn-listen").forEach((button) => {
+    button.addEventListener("click", function () {
+      const pronunciation = this.getAttribute("data-pronunciation");
       speak(pronunciation);
     });
   });
@@ -59,24 +68,26 @@ if ('speechSynthesis' in window) {
   // Vérifier si les voix sont chargées
   if (window.speechSynthesis.getVoices().length === 0) {
     window.speechSynthesis.onvoiceschanged = () => {
-      console.log('Voix chargé');
+      console.log("Voix chargées.");
     };
   }
 } else {
-  alert('Votre navigateur ne supporte pas la lecture vocale.');
+  alert("Votre navigateur ne supporte pas la lecture vocale.");
 }
+
 // Vérifier si le navigateur supporte les Service Workers
 if ("serviceWorker" in navigator) {
   // Enregistrer le Service Worker
   navigator.serviceWorker.register("/sw.js").then(
     function (registration) {
-      console.log("Service Worker registration successful with scope: ", registration.scope);
+      console.log("Service Worker a bien été enregistrer scope: ", registration.scope);
     },
     function (error) {
-      console.log("Service Worker registration failed: ", error);
+      console.log("Service Worker n'a pas été enregistrer : ", error);
     }
   );
 }
+
 //========================POUR INSTALLER=================================
 // Variable pour stocker l'événement beforeinstallprompt
 let deferredPrompt;
