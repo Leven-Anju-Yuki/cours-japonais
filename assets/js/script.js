@@ -1,28 +1,57 @@
 // Vérifier si le navigateur supporte l'API Web Speech
-if ("speechSynthesis" in window) {
+if ('speechSynthesis' in window) {
+  // Fonction pour vérifier si le son est actif
+  function checkAudioContext() {
+    return new Promise((resolve) => {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      oscillator.start(0);
+      oscillator.stop(0.1);
+
+      gainNode.gain.setValueAtTime(0, audioContext.currentTime + 0.1);
+
+      audioContext.resume().then(() => {
+        const state = audioContext.state; // Vérifie l'état de l'AudioContext
+        audioContext.close();
+        resolve(state === 'running');
+      });
+    });
+  }
+
   // Fonction pour lire un texte en japonais
   function speak(text) {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "ja-JP"; // Définit la langue à Japonais
+    checkAudioContext().then((isAudioActive) => {
+      if (!isAudioActive) {
+        alert('Le son de votre appareil semble désactivé. Veuillez vérifier vos paramètres audio.');
+        return;
+      }
 
-    // Vérifier si des voix sont disponibles
-    const availableVoices = window.speechSynthesis.getVoices();
-    const japaneseVoice = availableVoices.find((voice) => voice.lang === "ja-JP");
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'ja-JP'; // Définit la langue à Japonais
 
-    if (japaneseVoice) {
-      utterance.voice = japaneseVoice; // Utiliser une voix japonaise si disponible
-    } else {
-      console.warn("Voix japonaise non disponible, lecture avec une voix par défaut.");
-    }
+      // Vérifier si des voix sont disponibles
+      const availableVoices = window.speechSynthesis.getVoices();
+      const japaneseVoice = availableVoices.find(voice => voice.lang === 'ja-JP');
 
-    // Lecture de la voix
-    window.speechSynthesis.speak(utterance);
+      if (japaneseVoice) {
+        utterance.voice = japaneseVoice; // Utiliser une voix japonaise si disponible
+      } else {
+        console.warn('Voix japonaise non disponible, lecture avec une voix par défaut.');
+      }
+
+      // Lecture de la voix
+      window.speechSynthesis.speak(utterance);
+    });
   }
 
   // Ajouter des événements d'écoute à chaque bouton
-  document.querySelectorAll(".btn-listen").forEach((button) => {
-    button.addEventListener("click", function () {
-      const pronunciation = this.getAttribute("data-pronunciation");
+  document.querySelectorAll('.btn-listen').forEach(button => {
+    button.addEventListener('click', function () {
+      const pronunciation = this.getAttribute('data-pronunciation');
       speak(pronunciation);
     });
   });
@@ -30,13 +59,12 @@ if ("speechSynthesis" in window) {
   // Vérifier si les voix sont chargées
   if (window.speechSynthesis.getVoices().length === 0) {
     window.speechSynthesis.onvoiceschanged = () => {
-      console.log("Voices loaded");
+      console.log('Voices loaded');
     };
   }
 } else {
-  alert("Votre navigateur ne supporte pas la lecture vocale.");
+  alert('Votre navigateur ne supporte pas la lecture vocale.');
 }
-
 // Vérifier si le navigateur supporte les Service Workers
 if ("serviceWorker" in navigator) {
   // Enregistrer le Service Worker
