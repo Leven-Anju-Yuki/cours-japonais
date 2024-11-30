@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -301,45 +301,42 @@
   <!-- <script src="./assets/js/script.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>  
-  function speak(text) {
-    const synth = window.speechSynthesis;
+  <script>
+    function speak(text) {
+      const synth = window.speechSynthesis;
 
-    // Arrêter tout ce qui est en cours
-    if (synth.speaking) {
+      // Arrêter tout ce qui est en cours
+      if (synth.speaking) {
         console.log("Arrêt de la lecture en cours.");
         synth.cancel(); // Arrête la lecture en cours
+      }
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "ja-JP"; // Japonais
+
+      utterance.onend = function (event) {
+        console.log("Lecture terminée : " + event.elapsedTime + " millisecondes.");
+      };
+
+      utterance.onerror = function (event) {
+        console.error("Erreur de lecture : ", event.error);
+      };
+
+      synth.speak(utterance); // Lancer la nouvelle lecture
     }
 
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'ja-JP'; // Japonais
-
-    utterance.onend = function(event) {
-        console.log('Lecture terminée : ' + event.elapsedTime + ' millisecondes.');
-    };
-
-    utterance.onerror = function(event) {
-        console.error('Erreur de lecture : ', event.error);
-    };
-
-    synth.speak(utterance); // Lancer la nouvelle lecture
-}
-
-document.querySelectorAll('.btn-listen').forEach(button => {
-    button.addEventListener('click', function () {
-        const pronunciation = this.getAttribute('data-pronunciation');
+    document.querySelectorAll(".btn-listen").forEach((button) => {
+      button.addEventListener("click", function () {
+        const pronunciation = this.getAttribute("data-pronunciation");
         console.log("Prononciation cliquée : " + pronunciation);
         speak(pronunciation);
+      });
     });
-});
-window.speechSynthesis.onvoiceschanged = function() {
-    const voices = window.speechSynthesis.getVoices();
-    voices.forEach(function(voice) {
+    window.speechSynthesis.onvoiceschanged = function () {
+      const voices = window.speechSynthesis.getVoices();
+      voices.forEach(function (voice) {
         console.log(voice.name + " (" + voice.lang + ")");
-    });
-};
-
-
-    
-</script>
+      });
+    };
+  </script>
 </html>
