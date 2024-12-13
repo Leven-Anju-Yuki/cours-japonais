@@ -25,6 +25,12 @@ assets/
 ├── img/                  # Dossier contenant les images utilisées dans le projet
 │   ├── animaux/          # Images des animaux pour la page dédiée
 │   ├── nourriture/       # Images des plats japonais pour la page de nourriture
+│      ├── onigiri/       # Images des onigiri pour la page de nourriture
+│      ├── sushi/         # Images des sushi pour la page de nourriture
+│      ├── maki/          # Images des maki pour la page de nourriture
+│      ├── sashimi/       # Images des sashimi pour la page de nourriture
+│      ├── plats/         # Images des plats pour la page de nourriture
+│      └── desserts/      # Images des desserts pour la page de nourriture
 │   ├── favicon.png       # Favicon pour le projet (petite icône visible dans l'onglet du navigateur)
 │   ├── fond pc.avif      # Image de fond pour la version bureau
 │   └── fond tel.jiff     # Image de fond pour la version mobile
