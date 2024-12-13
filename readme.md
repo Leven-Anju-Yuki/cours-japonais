@@ -107,7 +107,5 @@ Chaque élément dispose d'un bouton permettant d'écouter la prononciation en j
 ---
 
 ## ✨ Auteur
-Créé par [Votre Nom ou Pseudo].  
-Pour toute question ou suggestion, n'hésitez pas à me contacter.  
-
+Créé par Florie Decitre.  
 ---
