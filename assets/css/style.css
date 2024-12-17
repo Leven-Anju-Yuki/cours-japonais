@@ -78,12 +78,22 @@ body {
   /* Centre l'image d'arrière-plan */
 }
 h1 {
-  color: #333;
   margin-top: 30px;
+}
+h1,
+h2,
+h3 {
+  color: rgb(212, 101, 151) !important;
+  text-shadow: 2px 2px black;
 }
 .animaux img {
   width: 50px;
   height: 50px;
+}
+.index p {
+  border-radius: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.78);
 }
 /*======================================LA BASE==============================================*/
 
@@ -97,7 +107,7 @@ table {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 table thead {
-  background-color: #f7f7f7;
+  background-color: #f7f7f7c9;
 }
 table th,
 table td {
@@ -105,7 +115,7 @@ table td {
   border: 1px solid #ddd;
 }
 table tr:hover {
-  background-color: #f1f1f1;
+  background-color: #f1f1f191;
 }
 
 td img {
