@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Japonais</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="./assets/js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">🎌 Quiz Japonais - Teste tes connaissances ! 🎌</h1>
+
+    <!-- Accordéon principal -->
+    <div class="accordion" id="quizAccordion">
+      <!-- Fonction pour générer 20 questions -->
+      <script>
+        const quizData = {
+          animaux: [
+            { question: "Quel est le mot japonais pour 'chat' ?", options: ['Neko', 'Inu'], correct: 'Neko' },
+            { question: "Comment dit-on 'chien' ?", options: ['Inu', 'Usagi'], correct: 'Inu' },
+            { question: "Quel animal est 'usagi' ?", options: ['Lapin', 'Poisson'], correct: 'Lapin' },
+            { question: "Quel animal est 'sakana' ?", options: ['Poisson', 'Oiseau'], correct: 'Poisson' },
+            { question: "Que signifie 'tori' ?", options: ['Oiseau', 'Cheval'], correct: 'Oiseau' },
+            { question: "Comment dit-on 'poisson rouge' ?", options: ['Kingyo', 'Inu'], correct: 'Kingyo' },
+            { question: "Quel est le mot pour 'vache' ?", options: ['Ushi', 'Uma'], correct: 'Ushi' },
+            { question: "Quel est 'uma' ?", options: ['Cheval', 'Singe'], correct: 'Cheval' },
+            { question: "Quel animal est 'zō' ?", options: ['Éléphant', 'Ours'], correct: 'Éléphant' },
+            { question: "Comment dit-on 'lion' ?", options: ['Raion', 'Tora'], correct: 'Raion' },
+            { question: "Quel animal est 'tora' ?", options: ['Tigre', 'Chien'], correct: 'Tigre' },
+            { question: "Que veut dire 'neko' ?", options: ['Chat', 'Ours'], correct: 'Chat' },
+            { question: "Quel mot signifie 'serpent' ?", options: ['Hebi', 'Tori'], correct: 'Hebi' },
+            { question: "Quel animal est 'inu' ?", options: ['Chien', 'Lapin'], correct: 'Chien' },
+            { question: "Comment dit-on 'cochon' ?", options: ['Buta', 'Kame'], correct: 'Buta' },
+            { question: "Que signifie 'kame' ?", options: ['Tortue', 'Oiseau'], correct: 'Tortue' },
+            { question: "Quel est le mot pour 'oiseau' ?", options: ['Tori', 'Neko'], correct: 'Tori' },
+            { question: "Quel est 'kaeru' ?", options: ['Grenouille', 'Singe'], correct: 'Grenouille' },
+            { question: "Comment dit-on 'panda' ?", options: ['Panda', 'Uma'], correct: 'Panda' },
+            { question: "Quel animal est 'kuma' ?", options: ['Ours', 'Chat'], correct: 'Ours' }
+          ]
+          // Tu peux ajouter ici les autres sections comme Couleurs, Nourriture, etc.
+        };
+
+        // Fonction pour générer les questions dynamiquement
+        function generateQuestions(section, id) {
+          let html = "";
+          quizData[section].forEach((q, index) => {
+            html += `
+              <p>${index + 1}. ${q.question}</p>
+              <button class="btn btn-outline-primary" onclick="checkAnswer('${q.correct}', '${id + index}', '${section}')">${q.options[0]}</button>
+              <button class="btn btn-outline-primary" onclick="checkAnswer('${q.correct}', '${id + index}', '${section}')">${q.options[1]}</button>
+              <div id="result-${id + index}" class="mt-2"></div>
+            `;
+          });
+          return html;
+        }
+      </script>
+
+      <!-- Section Animaux -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAnimaux">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAnimaux" aria-expanded="true" aria-controls="collapseAnimaux">
+            🐾 Quiz sur les Animaux (20 questions)
+          </button>
+        </h2>
+        <div id="collapseAnimaux" class="accordion-collapse collapse show" aria-labelledby="headingAnimaux" data-bs-parent="#quizAccordion">
+          <div class="accordion-body" id="quiz-animaux">
+            <!-- Les questions générées ici -->
+            <script>
+              document.getElementById("quiz-animaux").innerHTML = generateQuestions('animaux', 'animaux');
+            </script>
+          </div>
+        </div>
+      </div>
+    </div> <!-- Fin accordéon -->
+
+    <!-- Affichage du pourcentage de réussite -->
+    <div class="mt-5 text-center">
+      <h3>🎯 Ton score :</h3>
+      <div id="score" class="fs-4"></div>
+    </div>
+  </div>
+
+  <script>
+    let totalQuestions = 0;
+    let correctAnswers = 0;
+
+    function checkAnswer(correct, id, section) {
+      const resultDiv = document.getElementById(`result-${id}`);
+      if (!resultDiv.dataset.answered) {
+        totalQuestions++;
+        if (correct === event.target.innerText) {
+          correctAnswers++;
+          resultDiv.innerHTML = '<span class="text-success">✅ Correct !</span>';
+        } else {
+          resultDiv.innerHTML = '<span class="text-danger">❌ Mauvaise réponse.</span>';
+        }
+        resultDiv.dataset.answered = "true";
+        updateScore();
+      }
+    }
+
+    function updateScore() {
+      const score = ((correctAnswers / totalQuestions) * 100).toFixed(2);
+      document.getElementById("score").innerText = `Tu as répondu correctement à ${correctAnswers} sur ${totalQuestions} (${score}%)`;
+    }
+  </script>
+</body>
+</html>

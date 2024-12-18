@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Définition de l'encodage des caractères -->
+    <meta charset="UTF-8" />
+    <!-- Réglage de la fenêtre d'affichage pour une meilleure compatibilité mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Titre de la page -->
+    <title>Cours de japonais - Les Formules de politesses</title>
+
+    <!-- Balises Meta SEO -->
+    <meta
+      name="description"
+      content="Apprenez les noms des animaux, les liens de parenté, les couleurs, et découvrez les différentes écritures japonaises (hiragana, katakana, kanji). Un cours complet pour enrichir votre vocabulaire tout en vous amusant."
+    />
+    <meta
+      name="keywords"
+      content="animaux, japonais, phonétique, katakana, kanji, liens de parenté, couleurs, écriture, cours, apprentissage"
+    />
+    <meta name="author" content="Cours de japonais" />
+
+    <!-- Balises Meta Open Graph (OG) pour les réseaux sociaux -->
+    <meta property="og:title" content="Cours de japonais - Les Formules de Politesses" />
+    <meta
+      property="og:description"
+      content="Explorez les formules de politesses en japonais avec ce tableau pratique. Parfait pour les débutants qui souhaitent enrichir leur vocabulaire."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://leven-anju-yuki.github.io/japonais/index.html" />
+    <meta property="og:image" content="https://leven-anju-yuki.github.io/japonais/assets/img/favicon.png" />
+    <meta property="og:site_name" content="Cours japonais" />
+
+    <!-- Favicon pour les navigateurs de bureau et mobiles -->
+    <link id="favicon" rel="icon" href="./assets/img/favicon.png" type="image/png" />
+
+    <!-- Fichier manifest pour les applications web progressives -->
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- Fichiers CSS pour le style du site -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/couleur.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="width: 10%; margin: 0% !important; padding: 0%" href="./index.html"
+            ><img style="width: 70%; margin: 0% !important" src="./assets/img/favicon.png" alt=""
+          /></a>
+          <!-- Menu Burger -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Liens de navigation -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Les Polices</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./couleur.html">Les Couleurs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./famille.html">Les Liens de Famille</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./animaux.html">Les Animaux</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nourriture.html">La Nourriture</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./politesse.html">Les formules de politesses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./quiz.html">Quiz</a>
+              </li>
+              <center>
+                <button class="btn-install ml-2" id="installButton" style="display: none">Installer</button>
+              </center>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <body>
+        <div class="container mt-5">
+          <h1 class="text-center mb-4">🎌 Quiz Japonais - Teste tes connaissances ! 🎌</h1>
+      
+          <!-- Accordéon principal -->
+          <div class="accordion" id="quizAccordion">
+      
+            <!-- Section Animaux -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingAnimaux">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAnimaux" aria-expanded="true" aria-controls="collapseAnimaux">
+                  🐾 Quiz sur les Animaux (20 questions)
+                </button>
+              </h2>
+              <div id="collapseAnimaux" class="accordion-collapse collapse show" aria-labelledby="headingAnimaux" data-bs-parent="#quizAccordion">
+                <div class="accordion-body" id="quiz-animaux"></div>
+              </div>
+            </div>
+      
+            <!-- Section Couleurs -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingCouleurs">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCouleurs" aria-expanded="false" aria-controls="collapseCouleurs">
+                  🎨 Quiz sur les Couleurs (20 questions)
+                </button>
+              </h2>
+              <div id="collapseCouleurs" class="accordion-collapse collapse" aria-labelledby="headingCouleurs" data-bs-parent="#quizAccordion">
+                <div class="accordion-body" id="quiz-couleurs"></div>
+              </div>
+            </div>
+      
+            <!-- Section Nourriture -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNourriture">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNourriture" aria-expanded="false" aria-controls="collapseNourriture">
+                  🍣 Quiz sur la Nourriture (20 questions)
+                </button>
+              </h2>
+              <div id="collapseNourriture" class="accordion-collapse collapse" aria-labelledby="headingNourriture" data-bs-parent="#quizAccordion">
+                <div class="accordion-body" id="quiz-nourriture"></div>
+              </div>
+            </div>
+      
+            <!-- Section Politesse -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingPolitesse">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePolitesse" aria-expanded="false" aria-controls="collapsePolitesse">
+                  🤝 Quiz sur la Politesse (20 questions)
+                </button>
+              </h2>
+              <div id="collapsePolitesse" class="accordion-collapse collapse" aria-labelledby="headingPolitesse" data-bs-parent="#quizAccordion">
+                <div class="accordion-body" id="quiz-politesse"></div>
+              </div>
+            </div>
+      
+            <!-- Section Familles -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFamilles">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFamilles" aria-expanded="false" aria-controls="collapseFamilles">
+                  👨‍👩‍👧 Quiz sur les Familles (20 questions)
+                </button>
+              </h2>
+              <div id="collapseFamilles" class="accordion-collapse collapse" aria-labelledby="headingFamilles" data-bs-parent="#quizAccordion">
+                <div class="accordion-body" id="quiz-familles"></div>
+              </div>
+            </div>
+      
+          </div>
+      
+          <!-- Score -->
+          <div class="mt-5 text-center">
+            <h3>🎯 Ton score :</h3>
+            <div id="score" class="fs-4"></div>
+          </div>
+        </div>
+      
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <script src="./assets/js/jquery-3.6.1.min.js"></script>
+        <script src="./assets/js/quiz.js"></script>
+    <style>
+      .bg-light {
+        background: transparent !important;
+      }
+    </style>
+  </body>
+</html>

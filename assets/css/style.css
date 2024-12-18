@@ -46,8 +46,8 @@ nav ul li a {
 
 /* Style des liens survolés */
 nav a:hover {
-  color: var(--dragon) !important;
-  font-size: 1.2em;
+  color: rgb(212, 101, 151) !important;
+  text-shadow: 2px 2px black;  font-size: 1.2em;
 }
 
 nav a:active {
