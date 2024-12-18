@@ -69,9 +69,9 @@ const quizData = {
   ],
 
   familles: [
-    { question: "Comment dit-on 'mère' en japonais ?", options: ["Haha", "Chichi"], correct: "Haha" },
-    { question: "Quel est le mot pour 'père' ?", options: ["Chichi", "Ani"], correct: "Chichi" },
-    { question: "Quel mot signifie 'frère aîné' ?", options: ["Ani", "Imouto"], correct: "Ani" },
+    { question: "Comment dit-on 'mère' en japonais ?", options: ["Okaasan", "Chichi"], correct: "Okaasan" },
+    { question: "Quel est le mot pour 'père' ?", options: ["Otousan", "Ani"], correct: "Otousan" },
+    { question: "Quel mot signifie 'frère aîné' ?", options: ["Oneesan", "Imouto"], correct: "Oneesan" },
     // 17 questions supplémentaires similaires...
   ],
 };
