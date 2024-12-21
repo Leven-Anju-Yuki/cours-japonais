@@ -19,7 +19,7 @@ const quizData = {
     { question: "Comment dit-on 'papillon' ?", options: ["Chō", "Uma"], correct: "Chō" },
     { question: "Quel animal est 'Kaeru' ?", options: ["Grenouille", "Tortue"], correct: "Grenouille" },
     { question: "Comment dit-on 'cochon' ?", options: ["Buta", "Kame"], correct: "Buta" },
-    { question: "Comment dit-on 'panda' ?", options: ['Panda', 'Uma'], correct: 'Panda' },
+    { question: "Comment dit-on 'panda' ?", options: ["Panda", "Uma"], correct: "Panda" },
 
     { question: "Quel est le mot japonais pour 'lion' ?", options: ["Raion", "Uma"], correct: "Raion" },
     { question: "Comment dit-on 'poisson rouge' ?", options: ["Kingyo", "Sakana"], correct: "Kingyo" },
@@ -52,27 +52,156 @@ const quizData = {
     { question: "Quel est le mot pour 'gris foncé' ?", options: ["Kurogane", "Haiiro"], correct: "Kurogane" },
   ],
 
-  nourriture: [
-    { question: "Quel est le mot japonais pour 'riz' ?", options: ["Gohan", "Niku"], correct: "Gohan" },
-    { question: "Comment dit-on 'viande' ?", options: ["Niku", "Sakana"], correct: "Niku" },
-    { question: "Quel mot signifie 'poisson' ?", options: ["Sakana", "Niku"], correct: "Sakana" },
-    { question: "Quel est le mot pour 'nouilles' ?", options: ["Men", "Sakana"], correct: "Men" },
-    { question: "Comment dit-on 'thé vert' ?", options: ["Ocha", "Sake"], correct: "Ocha" },
-    // 15 questions supplémentaires similaires...
+  sushi: [
+    { question: "Quel sushi est composé de poisson cru sur une boule de riz ?", options: ['Nigiri', 'Maki'], correct: 'Nigiri' },
+    // { question: "Que signifie 'Temaki' ?", options: ['Cornet de sushi', 'Rouleau de riz'], correct: 'Cornet de sushi' },
+    { question: "Comment dit-on 'Roulement de riz avec algue' en japonais ?", options: ['Maki', 'Nigiri'], correct: 'Maki' },
+    { question: "Quel ingrédient est commun à tous les sushi ?", options: ['Riz vinaigré', 'Algue nori'], correct: 'Riz vinaigré' },
+    { question: "Quel sushi est souvent garni d’œufs de poisson ?", options: ['Gunkan', 'Nigiri'], correct: 'Gunkan' },
+    { question: "Que signifie 'Sashimi' ?", options: ['Poisson cru sans riz', 'Rouleau de riz'], correct: 'Poisson cru sans riz' },
+    { question: "Quel sushi est roulé avec une feuille d'algue ?", options: ['Maki', 'Nigiri'], correct: 'Maki' },
+    { question: "Quel poisson est le plus souvent utilisé pour un 'Nigiri' ?", options: ['Saumon', 'Thon'], correct: 'Saumon' },
+    { question: "Que contient un 'California roll' ?", options: ['Avocat et crabe', 'Thon et saumon'], correct: 'Avocat et crabe' },
+    { question: "Que signifie 'Uramaki' ?", options: ['Sushi avec riz à l’extérieur', 'Sushi en forme de cône'], correct: 'Sushi avec riz à l’extérieur' },
+  ],
+  
+  onigiri: [
+    { question: "Que signifie 'Onigiri' ?", options: ['Boulettes de riz', 'Rouleau de sushi'], correct: 'Boulettes de riz' },
+    { question: "Quel ingrédient est utilisé pour enrober certains 'Onigiri' ?", options: ['Algue nori', 'Sésame noir'], correct: 'Algue nori' },
+    { question: "Quel est un ingrédient courant pour garnir un 'Onigiri' ?", options: ['Prune salée', 'Pâte de haricot rouge'], correct: 'Prune salée' },
+    { question: "Comment dit-on 'Triangle de riz garni' en japonais ?", options: ['Onigiri', 'Nigiri'], correct: 'Onigiri' },
+    { question: "Quel est un autre nom pour un 'Onigiri' ?", options: ['Omusubi', 'Gunkan'], correct: 'Omusubi' },
+    { question: "Que contient un 'Onigiri' au thon ?", options: ['Mayonnaise et thon', 'Crème et thon'], correct: 'Mayonnaise et thon' },
+  ],
+  
+  sashimi: [
+    { question: "Que signifie 'Sashimi' ?", options: ['Poisson cru coupé finement', 'Sushi au poisson'], correct: 'Poisson cru coupé finement' },
+    { question: "Quel poisson est souvent utilisé pour le 'Sashimi' ?", options: ['Saumon', 'Thon'], correct: 'Saumon' },
+    { question: "Quel ingrédient accompagne souvent le 'Sashimi' ?", options: ['Wasabi', 'Algue nori'], correct: 'Wasabi' },
+    { question: "Comment est servi le 'Sashimi' ?", options: ['En tranches fines', 'En boulettes'], correct: 'En tranches fines' },
+  ],
+  
+  plats: [
+    { question: "Que signifie 'Ramen' ?", options: ['Nouilles dans un bouillon', 'Riz sauté'], correct: 'Nouilles dans un bouillon' },
+    // { question: "Quel plat est composé de boulettes de viande de poulet ?", options: ['Yakitori', 'Karaage'], correct: 'Yakitori' },
+    { question: "Comment dit-on 'Nouilles sautées' en japonais ?", options: ['Yakisoba', 'Ramen'], correct: 'Yakisoba' },
+    { question: "Que contient le 'Karaage' ?", options: ['Poulet frit', 'Tempura de légumes'], correct: 'Poulet frit' },
+    { question: "Que signifie 'Donburi' ?", options: ['Bol de riz avec garniture', 'Soupe miso'], correct: 'Bol de riz avec garniture' },
+    { question: "Quel plat est une soupe à base de soja ?", options: ['Soupe miso', 'Ramen'], correct: 'Soupe miso' },
+    { question: "Que signifie 'Okonomiyaki' ?", options: ['Crêpe japonaise', 'Ravioli vapeur'], correct: 'Crêpe japonaise' },
+    { question: "Quel plat est surnommé 'pizza japonaise' ?", options: ['Okonomiyaki', 'Yakisoba'], correct: 'Okonomiyaki' },
+    { question: "Quel plat est servi avec des nouilles épaisses ?", options: ['Udon', 'Soba'], correct: 'Udon' },
+    { question: "Que contient un 'Tonkatsu' ?", options: ['Côtelette de porc panée', 'Poulet frit'], correct: 'Côtelette de porc panée' },
+    { question: "Quel plat est souvent servi avec du curry ?", options: ['Katsu curry', 'Donburi'], correct: 'Katsu curry' },
+    { question: "Que signifie 'Soba' ?", options: ['Nouilles fines au sarrasin', 'Nouilles épaisses'], correct: 'Nouilles fines au sarrasin' },
+    { question: "Quel plat est un bol de riz avec du bœuf ?", options: ['Gyudon', 'Okonomiyaki'], correct: 'Gyudon' },
+    { question: "Que contient un 'Takoyaki' ?", options: ['Poulpe', 'Crevettes'], correct: 'Poulpe' },
+    { question: "Comment dit-on 'Takoyaki' en français ?", options: ['Boulettes de poulpe', 'Riz sauté'], correct: 'Boulettes de poulpe' },
+    { question: "Quel plat est souvent mangé pendant les festivals ?", options: ['Takoyaki', 'Yakitori'], correct: 'Takoyaki' },
+  ],
+
+  desserts: [
+    { question: "Que signifie 'Matcha' en français ?", options: ['Thé vert', 'Pâte de haricot rouge'], correct: 'Thé vert' },
+    { question: "Quel est le dessert fait avec de la pâte de haricot rouge ?", options: ['Dorayaki', 'Taiyaki'], correct: 'Dorayaki' },
+    { question: "Que signifie 'Taiyaki' ?", options: ['Gâteau en forme de poisson', 'Glace au thé vert'], correct: 'Gâteau en forme de poisson' },
+    { question: "Quel dessert est une 'glace au thé vert' ?", options: ['Glace au matcha', 'Daifuku'], correct: 'Glace au matcha' },
+    { question: "Que contient un 'Daifuku' ?", options: ['Pâte de haricot rouge', 'Crème anglaise'], correct: 'Pâte de haricot rouge' },
+    { question: "Quel dessert japonais est un gâteau de riz gluant ?", options: ['Mochi', 'Dorayaki'], correct: 'Mochi' },
+    { question: "Comment dit-on 'Kakigōri' en français ?", options: ['Glace pilée', 'Crème glacée'], correct: 'Glace pilée' },
+    { question: "Quel dessert est souvent dégusté en été au Japon ?", options: ['Kakigōri', 'Taiyaki'], correct: 'Kakigōri' },
+    { question: "Que signifie 'Anmitsu' ?", options: ['Gelée sucrée avec des fruits', 'Glace au thé vert'], correct: 'Gelée sucrée avec des fruits' },
+    { question: "Comment dit-on 'Manju' en français ?", options: ['Pâte fourrée de haricot rouge', 'Gâteau de riz'], correct: 'Pâte fourrée de haricot rouge' },
+    // { question: "Quel dessert est connu pour ses couches fines ?", options: ['Kasutera', 'Dorayaki'], correct: 'Kasutera' },
+    { question: "Que signifie 'Dango' ?", options: ['Brochettes de boulettes de riz', 'Gâteau fourré'], correct: 'Brochettes de boulettes de riz' },
+    { question: "Quel dessert est populaire pendant les festivals ?", options: ['Dango', 'Mochi'], correct: 'Dango' },
+    { question: "Comment dit-on 'Crème glacée au sésame' en japonais ?", options: ['Goma ice', 'Matcha ice'], correct: 'Goma ice' },
+    { question: "Que contient un 'Yokan' ?", options: ['Gelée de haricot rouge', 'Thé vert'], correct: 'Gelée de haricot rouge' },
+    { question: "Quel dessert est fait à base de gelée et de haricot ?", options: ['Yokan', 'Manju'], correct: 'Yokan' },
+    // { question: "Quel dessert est un gâteau éponge importé du Portugal ?", options: ['Kasutera', 'Mochi'], correct: 'Kasutera' },
+    { question: "Quel dessert est servi sous forme de brochette ?", options: ['Dango', 'Daifuku'], correct: 'Dango' },
+    // { question: "Que signifie 'Kasutera' ?", options: ['Gâteau éponge', 'Gâteau de riz'], correct: 'Gâteau éponge' },
   ],
 
   politesse: [
-    { question: "Que signifie 'Arigatou' ?", options: ["Merci", "Bonjour"], correct: "Merci" },
-    { question: "Comment dit-on 'bonjour' le matin ?", options: ["Ohayou", "Konnichiwa"], correct: "Ohayou" },
-    { question: "Que signifie 'Sumimasen' ?", options: ["Excusez-moi", "Au revoir"], correct: "Excusez-moi" },
-    // 17 questions supplémentaires similaires...
+    {
+      question: "Que signifie 'Arigatou gozaimasu' ?",
+      options: ["Merci beaucoup", "Au revoir"],
+      correct: "Merci beaucoup",
+    },
+    { question: "Comment dit-on 'Bonjour' en japonais ?", options: ["Konnichiwa", "Sayōnara"], correct: "Konnichiwa" },
+    {
+      question: "Que signifie 'Sumimasen' ?",
+      options: ["Excusez-moi / Pardon", "De rien"],
+      correct: "Excusez-moi / Pardon",
+    },
+    { question: "Comment dit-on 'Bonsoir' ?", options: ["Konbanwa", "Ohayou gozaimasu"], correct: "Konbanwa" },
+    {
+      question: "Que signifie 'Ohayou gozaimasu' ?",
+      options: ["Bonjour (matin)", "Bonne nuit"],
+      correct: "Bonjour (matin)",
+    },
+    { question: "Que signifie 'Oyasumi nasai' ?", options: ["Bonne nuit", "Au revoir"], correct: "Bonne nuit" },
+    {
+      question: "Comment dit-on 'Bienvenue' dans un magasin ?",
+      options: ["Irasshaimase", "Otsukaresama desu"],
+      correct: "Irasshaimase",
+    },
+    {
+      question: "Que signifie 'Otsukaresama desu' ?",
+      options: ["Merci pour votre travail", "Bienvenue"],
+      correct: "Merci pour votre travail",
+    },
+    { question: "Comment dit-on 'Au revoir' ?", options: ["Sayōnara", "Arigatou"], correct: "Sayōnara" },
+    { question: "Que signifie 'Douitashimashite' ?", options: ["De rien", "Merci"], correct: "De rien" },
+    { question: "Comment dit-on 'Merci' en japonais ?", options: ["Arigatou", "Sumimasen"], correct: "Arigatou" },
+    { question: "Que signifie 'Itadakimasu' ?", options: ["Je vais manger", "Au revoir"], correct: "Je vais manger" },
+    {
+      question: "Que signifie 'Gochisousama deshita' ?",
+      options: ["Merci pour le repas", "Bonjour"],
+      correct: "Merci pour le repas",
+    },
+    { question: "Comment dit-on 'Je suis désolé(e)' ?", options: ["Gomen nasai", "Sumimasen"], correct: "Gomen nasai" },
+    { question: "Que signifie 'Onegaishimasu' ?", options: ["S’il vous plaît", "Merci"], correct: "S’il vous plaît" },
+    {
+      question: "Comment dit-on 'Bienvenue à la maison' ?",
+      options: ["Okaerinasai", "Ittekimasu"],
+      correct: "Okaerinasai",
+    },
+    { question: "Que signifie 'Ittekimasu' ?", options: ["J’y vais", "De rien"], correct: "J’y vais" },
+    { question: "Comment répondre à 'Ittekimasu' ?", options: ["Itterasshai", "Okaerinasai"], correct: "Itterasshai" },
+    {
+      question: "Que signifie 'Itadakimasu' avant de manger ?",
+      options: ["Bon appétit", "Merci"],
+      correct: "Bon appétit",
+    },
+    { question: "Comment dit-on 'Je suis fatigué(e)' ?", options: ["Tsukareta", "Sumimasen"], correct: "Tsukareta" },
   ],
 
   familles: [
-    { question: "Comment dit-on 'mère' en japonais ?", options: ["Okaasan", "Chichi"], correct: "Okaasan" },
-    { question: "Quel est le mot pour 'père' ?", options: ["Otousan", "Ani"], correct: "Otousan" },
-    { question: "Quel mot signifie 'frère aîné' ?", options: ["Oneesan", "Imouto"], correct: "Oneesan" },
-    // 17 questions supplémentaires similaires...
+    { question: "Comment dit-on 'mère' en japonais ?", options: ["Okaasan", "Okaasa"], correct: "Okaasan" },
+    { question: "Que signifie 'Otousan' ?", options: ["Père", "Grand-père"], correct: "Père" },
+    { question: "Quel est le mot japonais pour 'frère aîné' ?", options: ["Oniisan", "Otouto"], correct: "Oniisan" },
+    { question: "Comment dit-on 'sœur aînée' ?", options: ["Oneesan", "Imouto"], correct: "Oneesan" },
+    { question: "Que signifie 'Imouto' ?", options: ["Petite sœur", "Grande sœur"], correct: "Petite sœur" },
+    { question: "Quel est le mot japonais pour 'petit frère' ?", options: ["Otouto", "Ani"], correct: "Otouto" },
+    { question: "Comment dit-on 'grand-mère' ?", options: ["Obaasan", "Ojisan"], correct: "Obaasan" },
+    { question: "Que signifie 'Ojisan' ?", options: ["Oncle", "Grand-père"], correct: "Oncle" },
+    { question: "Comment dit-on 'grand-père' ?", options: ["Ojiisan", "Ojisan"], correct: "Ojiisan" },
+    { question: "Que signifie 'Obaasan' ?", options: ["Grand-mère", "Tante"], correct: "Grand-mère" },
+    { question: "Quel est le mot japonais pour 'oncle' ?", options: ["Ojisan", "Ojiisan"], correct: "Ojisan" },
+    { question: "Comment dit-on 'tante' ?", options: ["Obasan", "Obaasan"], correct: "Obasan" },
+    { question: "Que signifie 'Kazoku' ?", options: ["Famille", "Mère"], correct: "Famille" },
+    { question: "Quel est le mot japonais pour 'cousin' ?", options: ["Itoko", "Ojisan"], correct: "Itoko" },
+    { question: "Comment dit-on 'petits-enfants' ?", options: ["Mago", "Kazoku"], correct: "Mago" },
+    { question: "Que signifie 'Giri no haha' ?", options: ["Belle-mère", "Grand-mère"], correct: "Belle-mère" },
+    {
+      question: "Quel est le mot japonais pour 'beau-père' ?",
+      options: ["Giri no chichi", "Chichi"],
+      correct: "Giri no chichi",
+    },
+    { question: "Comment dit-on 'neveu' ?", options: ["Oi", "Mei"], correct: "Oi" },
+    { question: "Que signifie 'Mei' ?", options: ["Nièce", "Cousine"], correct: "Nièce" },
+    { question: "Quel est le mot japonais pour 'fratrie' ?", options: ["Kyoudai", "Kazoku"], correct: "Kyoudai" },
   ],
 };
 
@@ -99,7 +228,11 @@ function generateQuestions(section, id) {
 function loadQuizzes() {
   document.getElementById("quiz-animaux").innerHTML = generateQuestions("animaux", "animaux");
   document.getElementById("quiz-couleurs").innerHTML = generateQuestions("couleurs", "couleurs");
-  document.getElementById("quiz-nourriture").innerHTML = generateQuestions("nourriture", "nourriture");
+  document.getElementById("quiz-desserts").innerHTML = generateQuestions("desserts", "desserts");
+  document.getElementById("quiz-plats").innerHTML = generateQuestions("plats", "plats");
+  document.getElementById("quiz-sushi").innerHTML = generateQuestions("sushi", "sushi");
+  document.getElementById("quiz-onigiri").innerHTML = generateQuestions("onigiri", "onigiri");
+  document.getElementById("quiz-sashimi").innerHTML = generateQuestions("sashimi", "sashimi");
   document.getElementById("quiz-politesse").innerHTML = generateQuestions("politesse", "politesse");
   document.getElementById("quiz-familles").innerHTML = generateQuestions("familles", "familles");
 }
