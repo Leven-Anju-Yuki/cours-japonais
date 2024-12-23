@@ -1,299 +1,473 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <!-- Définition de l'encodage des caractères -->
-    <meta charset="UTF-8" />
-    <!-- Réglage de la fenêtre d'affichage pour une meilleure compatibilité mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Titre de la page -->
-    <title>Cours de japonais - Liens de Parentalité</title>
+    <head>
+        <!-- Définition de l'encodage des caractères -->
+        <meta charset="UTF-8" />
+        <!-- Réglage de la fenêtre d'affichage pour une meilleure compatibilité mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Titre de la page -->
+        <title>Cours de japonais - Liens de Parentalité</title>
 
-    <!-- Balises Meta SEO -->
-    <meta
-      name="description"
-      content="Apprenez les noms des animaux, les liens de parenté, les couleurs, et découvrez les différentes écritures japonaises (hiragana, katakana, kanji). Un cours complet pour enrichir votre vocabulaire tout en vous amusant."
-    />
-    <meta
-      name="keywords"
-      content="animaux, japonais, phonétique, katakana, kanji, liens de parenté, couleurs, écriture, cours, apprentissage"
-    />
-    <meta name="author" content="Cours de japonais" />
+        <!-- Balises Meta SEO -->
+        <meta
+            name="description"
+            content="Apprenez les noms des animaux, les liens de parenté, les couleurs, et découvrez les différentes écritures japonaises (hiragana, katakana, kanji). Un cours complet pour enrichir votre vocabulaire tout en vous amusant."
+        />
+        <meta
+            name="keywords"
+            content="animaux, japonais, phonétique, katakana, kanji, liens de parenté, couleurs, écriture, cours, apprentissage"
+        />
+        <meta name="author" content="Cours de japonais" />
 
-    <!-- Balises Meta Open Graph (OG) pour les réseaux sociaux -->
-    <meta property="og:title" content="Cours de japonais - Les Couleurs" />
-    <meta
-      property="og:description"
-      content="Explorez les noms des couleurs en japonais avec ce tableau pratique. Parfait pour les débutants qui souhaitent enrichir leur vocabulaire."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://leven-anju-yuki.github.io/japonais/index.html" />
-    <meta property="og:image" content="https://leven-anju-yuki.github.io/japonais/assets/img/favicon.png" />
-    <meta property="og:site_name" content="Cours japonais" />
+        <!-- Balises Meta Open Graph (OG) pour les réseaux sociaux -->
+        <meta property="og:title" content="Cours de japonais - Les Couleurs" />
+        <meta
+            property="og:description"
+            content="Explorez les noms des couleurs en japonais avec ce tableau pratique. Parfait pour les débutants qui souhaitent enrichir leur vocabulaire."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://leven-anju-yuki.github.io/japonais/index.html" />
+        <meta
+            property="og:image"
+            content="https://leven-anju-yuki.github.io/japonais/assets/img/favicon.png"
+        />
+        <meta property="og:site_name" content="Cours japonais" />
 
-    <!-- Favicon pour les navigateurs de bureau et mobiles -->
-    <link id="favicon" rel="icon" href="./assets/img/favicon.png" type="image/png" />
+        <!-- Favicon pour les navigateurs de bureau et mobiles -->
+        <link id="favicon" rel="icon" href="./assets/img/favicon.png" type="image/png" />
 
-    <!-- Fichier manifest pour les applications web progressives -->
-    <link rel="manifest" href="manifest.json" />
+        <!-- Fichier manifest pour les applications web progressives -->
+        <link rel="manifest" href="manifest.json" />
 
-    <!-- Fichiers CSS pour le style du site -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" style="width: 10%; margin: 0% !important; padding: 0%" href="./index.html"
-            ><img style="width: 70%; margin: 0% !important" src="./assets/img/favicon.png" alt=""
-          /></a>
-          <!-- Menu Burger -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Liens de navigation -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="./index.html">Les Polices</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./couleur.html">Les Couleurs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./famille.html">Les Liens de Famille</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./animaux.html">Les Animaux</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./nourriture.html">La Nourriture</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./politesse.html">Les formules de politesses</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./quiz.html">quiz</a>
-              </li>
-              <center>
-                <button class="btn-install ml-2" id="installButton" style="display: none">Installer</button>
-              </center>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+        <!-- Fichiers CSS pour le style du site -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a
+                        class="navbar-brand"
+                        style="width: 10%; margin: 0% !important; padding: 0%"
+                        href="./index.html"
+                        ><img
+                            style="width: 70%; margin: 0% !important"
+                            src="./assets/img/favicon.png"
+                            alt=""
+                    /></a>
+                    <!-- Menu Burger -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Liens de navigation -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Les Polices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./couleur.html">Les Couleurs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./famille.html">Les Liens de Famille</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./animaux.html">Les Animaux</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./nourriture.html">La Nourriture</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./politesse.html"
+                                    >Les formules de politesses</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./quiz.html">quiz</a>
+                            </li>
+                            <center>
+                                <button
+                                    class="btn-install ml-2"
+                                    id="installButton"
+                                    style="display: none"
+                                >
+                                    Installer
+                                </button>
+                            </center>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-    <!-- Tableau des Liens Parentalité -->
-    <h1>Liens de Parentalité en Japonais</h1>
-    <div class="container mt-4">
-      <div class="row">
-        <!-- Carte 1 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Okaasan">🔊</button>
-              <center><img src="./assets/img/famille/femme.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Mère</p>
-              <p><strong>Romaji :</strong> Okaasan</p>
-              <p><strong>Katakana :</strong> オカアサン</p>
-              <p><strong>Kanji :</strong> 母</p>
+        <!-- Tableau des Liens Parentalité -->
+        <h1>Liens de Parentalité en Japonais</h1>
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Carte 1 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Okaasan"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/femme.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Mère</p>
+                            <p><strong>Romaji :</strong> Okaasan</p>
+                            <p><strong>Katakana :</strong> オカアサン</p>
+                            <p><strong>Kanji :</strong> 母</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 2 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Otousan"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/homme.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Père</p>
+                            <p><strong>Romaji :</strong> Otousan</p>
+                            <p><strong>Katakana :</strong> オトウサン</p>
+                            <p><strong>Kanji :</strong> 父</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 3 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Oniisan"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/adogarcon.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Frère aîné</p>
+                            <p><strong>Romaji :</strong> Oniisan</p>
+                            <p><strong>Katakana :</strong> オニイサン</p>
+                            <p><strong>Kanji :</strong> 兄</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 4 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Oneesan"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/adofille.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Sœur aînée</p>
+                            <p><strong>Romaji :</strong> Oneesan</p>
+                            <p><strong>Katakana :</strong> オネエサン</p>
+                            <p><strong>Kanji :</strong> 姉</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 5 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Otouto"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/garcon.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Frère cadet</p>
+                            <p><strong>Romaji :</strong> Otouto</p>
+                            <p><strong>Katakana :</strong> オトウト</p>
+                            <p><strong>Kanji :</strong> 弟</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 6 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Imouto"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/fille.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Sœur cadette</p>
+                            <p><strong>Romaji :</strong> Imouto</p>
+                            <p><strong>Katakana :</strong> イモウト</p>
+                            <p><strong>Kanji :</strong> 妹</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 7 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Obaasan"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/grand-mere.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Grand-mère</p>
+                            <p><strong>Romaji :</strong> Obaasan</p>
+                            <p><strong>Katakana :</strong> オバアサン</p>
+                            <p><strong>Kanji :</strong> 祖母</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 8 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Ojiisan"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/grand-pere.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Grand-père</p>
+                            <p><strong>Romaji :</strong> Ojiisan</p>
+                            <p><strong>Katakana :</strong> オジイサン</p>
+                            <p><strong>Kanji :</strong> 祖父</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 9 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Ojisan"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/homme.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Oncle</p>
+                            <p><strong>Romaji :</strong> Ojisan</p>
+                            <p><strong>Katakana :</strong> オジサン</p>
+                            <p><strong>Kanji :</strong> 叔父</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 10 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Obasan"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/femme.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Tante</p>
+                            <p><strong>Romaji :</strong> Obasan</p>
+                            <p><strong>Katakana :</strong> オバサン</p>
+                            <p><strong>Kanji :</strong> 叔母</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 11 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="mago"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/garcon.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Petit-fils</p>
+                            <p><strong>Romaji :</strong> mago</p>
+                            <p><strong>Katakana :</strong> マゴ</p>
+                            <p><strong>Kanji :</strong> 孫</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 13 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Mago"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/fille.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Petite-fille</p>
+                            <p><strong>Romaji :</strong> Mago</p>
+                            <p><strong>Katakana :</strong> マゴ</p>
+                            <p><strong>Kanji :</strong> 孫</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 14 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Itoko"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/adogarcon.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Cousin</p>
+                            <p><strong>Romaji :</strong> Itoko</p>
+                            <p><strong>Katakana :</strong> イトコ</p>
+                            <p><strong>Kanji :</strong> 従兄弟</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carte 15 -->
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <button
+                                class="btn-listen nourriture-btn-listen"
+                                data-pronunciation="Itoko"
+                            >
+                                🔊
+                            </button>
+                            <center>
+                                <img
+                                    src="./assets/img/famille/adofille.png"
+                                    alt=""
+                                    class="card-image"
+                                />
+                            </center>
+                            <p><strong>Traduction :</strong> Cousine</p>
+                            <p><strong>Romaji :</strong> Itoko</p>
+                            <p><strong>Katakana :</strong> イトコ</p>
+                            <p><strong>Kanji :</strong> 従姉妹</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <!-- Carte 2 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Otousan">🔊</button>
-              <center><img src="./assets/img/famille/homme.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Père</p>
-              <p><strong>Romaji :</strong> Otousan</p>
-              <p><strong>Katakana :</strong> オトウサン</p>
-              <p><strong>Kanji :</strong> 父</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 3 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Oniisan">🔊</button>
-              <center><img src="./assets/img/famille/adogarcon.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Frère aîné</p>
-              <p><strong>Romaji :</strong> Oniisan</p>
-              <p><strong>Katakana :</strong> オニイサン</p>
-              <p><strong>Kanji :</strong> 兄</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 4 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Oneesan">🔊</button>
-              <center><img src="./assets/img/famille/adofille.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Sœur aînée</p>
-              <p><strong>Romaji :</strong> Oneesan</p>
-              <p><strong>Katakana :</strong> オネエサン</p>
-              <p><strong>Kanji :</strong> 姉</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 5 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Otouto">🔊</button>
-              <center><img src="./assets/img/famille/garcon.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Frère cadet</p>
-              <p><strong>Romaji :</strong> Otouto</p>
-              <p><strong>Katakana :</strong> オトウト</p>
-              <p><strong>Kanji :</strong> 弟</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 6 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Imouto">🔊</button>
-              <center><img src="./assets/img/famille/fille.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Sœur cadette</p>
-              <p><strong>Romaji :</strong> Imouto</p>
-              <p><strong>Katakana :</strong> イモウト</p>
-              <p><strong>Kanji :</strong> 妹</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 7 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Obaasan">🔊</button>
-              <center><img src="./assets/img/famille/grand-mere.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Grand-mère</p>
-              <p><strong>Romaji :</strong> Obaasan</p>
-              <p><strong>Katakana :</strong> オバアサン</p>
-              <p><strong>Kanji :</strong> 祖母</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 8 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Ojiisan">🔊</button>
-              <center><img src="./assets/img/famille/grand-pere.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Grand-père</p>
-              <p><strong>Romaji :</strong> Ojiisan</p>
-              <p><strong>Katakana :</strong> オジイサン</p>
-              <p><strong>Kanji :</strong> 祖父</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 9 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Ojisan">🔊</button>
-              <center><img src="./assets/img/famille/homme.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Oncle</p>
-              <p><strong>Romaji :</strong> Ojisan</p>
-              <p><strong>Katakana :</strong> オジサン</p>
-              <p><strong>Kanji :</strong> 叔父</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 10 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Obasan">🔊</button>
-              <center><img src="./assets/img/famille/femme.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Tante</p>
-              <p><strong>Romaji :</strong> Obasan</p>
-              <p><strong>Katakana :</strong> オバサン</p>
-              <p><strong>Kanji :</strong> 叔母</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 11 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="mago">🔊</button>
-              <center><img src="./assets/img/famille/garcon.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Petit-fils</p>
-              <p><strong>Romaji :</strong> mago</p>
-              <p><strong>Katakana :</strong> マゴ</p>
-              <p><strong>Kanji :</strong> 孫</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 13 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Mago">🔊</button>
-              <center><img src="./assets/img/famille/fille.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Petite-fille</p>
-              <p><strong>Romaji :</strong> Mago</p>
-              <p><strong>Katakana :</strong> マゴ</p>
-              <p><strong>Kanji :</strong> 孫</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 14 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Itoko">🔊</button>
-              <center><img src="./assets/img/famille/adogarcon.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Cousin</p>
-              <p><strong>Romaji :</strong> Itoko</p>
-              <p><strong>Katakana :</strong> イトコ</p>
-              <p><strong>Kanji :</strong> 従兄弟</p>
-            </div>
-          </div>
-        </div>
-        <!-- Carte 15 -->
-        <div class="col-md-4 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <button class="btn-listen nourriture-btn-listen" data-pronunciation="Itoko">🔊</button>
-              <center><img src="./assets/img/famille/adofille.png" alt="" class="card-image" /></center>
-              <p><strong>Traduction :</strong> Cousine</p>
-              <p><strong>Romaji :</strong> Itoko</p>
-              <p><strong>Katakana :</strong> イトコ</p>
-              <p><strong>Kanji :</strong> 従姉妹</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <style>
-      .card-image {
-        width: 30%;
-        border-radius: 20px;
-        margin-top: -10px;
-      }
-      .bg-light {
-        background: transparent !important;
-      }
-    </style>
-    <script src="./assets/js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+        <button onclick="scrollToTop()" id="scrollUpBtn" title="Haut de page">↑</button>
+
+        <style>
+            .card-image {
+                width: 30%;
+                border-radius: 20px;
+                margin-top: -10px;
+            }
+            .bg-light {
+                background: transparent !important;
+            }
+        </style>
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/scroll-up.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>

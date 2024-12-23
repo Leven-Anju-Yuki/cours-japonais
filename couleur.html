@@ -1,230 +1,340 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <!-- Définition de l'encodage des caractères -->
-    <meta charset="UTF-8" />
-    <!-- Réglage de la fenêtre d'affichage pour une meilleure compatibilité mobile -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Titre de la page -->
-    <title>Cours de japonais - Les Couleurs</title>
+    <head>
+        <!-- Définition de l'encodage des caractères -->
+        <meta charset="UTF-8" />
+        <!-- Réglage de la fenêtre d'affichage pour une meilleure compatibilité mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Titre de la page -->
+        <title>Cours de japonais - Les Couleurs</title>
 
-    <!-- Balises Meta SEO -->
-    <meta
-      name="description"
-      content="Apprenez les noms des animaux, les liens de parenté, les couleurs, et découvrez les différentes écritures japonaises (hiragana, katakana, kanji). Un cours complet pour enrichir votre vocabulaire tout en vous amusant."
-    />
-    <meta
-      name="keywords"
-      content="animaux, japonais, phonétique, katakana, kanji, liens de parenté, couleurs, écriture, cours, apprentissage"
-    />
-    <meta name="author" content="Cours de japonais" />
+        <!-- Balises Meta SEO -->
+        <meta
+            name="description"
+            content="Apprenez les noms des animaux, les liens de parenté, les couleurs, et découvrez les différentes écritures japonaises (hiragana, katakana, kanji). Un cours complet pour enrichir votre vocabulaire tout en vous amusant."
+        />
+        <meta
+            name="keywords"
+            content="animaux, japonais, phonétique, katakana, kanji, liens de parenté, couleurs, écriture, cours, apprentissage"
+        />
+        <meta name="author" content="Cours de japonais" />
 
-    <!-- Balises Meta Open Graph (OG) pour les réseaux sociaux -->
-    <meta property="og:title" content="Cours de japonais - Les Couleurs" />
-    <meta
-      property="og:description"
-      content="Explorez les noms des couleurs en japonais avec ce tableau pratique. Parfait pour les débutants qui souhaitent enrichir leur vocabulaire."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://leven-anju-yuki.github.io/japonais/index.html" />
-    <meta property="og:image" content="https://leven-anju-yuki.github.io/japonais/assets/img/favicon.png" />
-    <meta property="og:site_name" content="Cours japonais" />
+        <!-- Balises Meta Open Graph (OG) pour les réseaux sociaux -->
+        <meta property="og:title" content="Cours de japonais - Les Couleurs" />
+        <meta
+            property="og:description"
+            content="Explorez les noms des couleurs en japonais avec ce tableau pratique. Parfait pour les débutants qui souhaitent enrichir leur vocabulaire."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://leven-anju-yuki.github.io/japonais/index.html" />
+        <meta
+            property="og:image"
+            content="https://leven-anju-yuki.github.io/japonais/assets/img/favicon.png"
+        />
+        <meta property="og:site_name" content="Cours japonais" />
 
-    <!-- Favicon pour les navigateurs de bureau et mobiles -->
-    <link id="favicon" rel="icon" href="./assets/img/favicon.png" type="image/png" />
+        <!-- Favicon pour les navigateurs de bureau et mobiles -->
+        <link id="favicon" rel="icon" href="./assets/img/favicon.png" type="image/png" />
 
-    <!-- Fichier manifest pour les applications web progressives -->
-    <link rel="manifest" href="manifest.json" />
+        <!-- Fichier manifest pour les applications web progressives -->
+        <link rel="manifest" href="manifest.json" />
 
-    <!-- Fichiers CSS pour le style du site -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/couleur.css" />
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" style="width: 10%; margin: 0% !important; padding: 0%" href="./index.html"
-            ><img style="width: 70%; margin: 0% !important" src="./assets/img/favicon.png" alt=""
-          /></a>
-          <!-- Menu Burger -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Liens de navigation -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="./index.html">Les Polices</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./couleur.html">Les Couleurs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./famille.html">Les Liens de Famille</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./animaux.html">Les Animaux</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./nourriture.html">La Nourriture</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./politesse.html">Les formules de politesses</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./quiz.html">Quiz</a>
-              </li>
-              <center>
-                <button class="btn-install ml-2" id="installButton" style="display: none">Installer</button>
-              </center>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- Tableau des Couleurs -->
-    <h1>Couleurs en Japonais</h1>
-    <table>
-      <tr>
-        <th>Couleur</th>
-        <th>Phonétique (Romaji)</th>
-        <th>Katakana</th>
-        <th>Kanji</th>
-      </tr>
-      <tr>
-        <td class="color-block red">Rouge</td>
-        <td>Aka <button class="btn-listen" data-pronunciation="Aka">🔊</button></td>
-        <td>アカ</td>
-        <td>赤</td>
-      </tr>
-      <tr>
-        <td class="color-block blue">Bleu</td>
-        <td>Ao <button class="btn-listen" data-pronunciation="ao">🔊</button></td>
-        <td>アオ</td>
-        <td>青</td>
-      </tr>
-      <tr>
-        <td class="color-block green">Vert</td>
-        <td>Midori <button class="btn-listen" data-pronunciation="midori">🔊</button></td>
-        <td>ミドリ</td>
-        <td>緑</td>
-      </tr>
-      <tr>
-        <td class="color-block yellow">Jaune</td>
-        <td>Ki-iro <button class="btn-listen" data-pronunciation="ki-iro">🔊</button></td>
-        <td>キイロ</td>
-        <td>黄</td>
-      </tr>
-      <tr>
-        <td class="color-block pink">Rose</td>
-        <td>Pinku <button class="btn-listen" data-pronunciation="pinku">🔊</button></td>
-        <td>ピンク</td>
-        <td>桃色</td>
-      </tr>
-      <tr>
-        <td class="color-block black">Noir</td>
-        <td>Kuro <button class="btn-listen" data-pronunciation="kuro">🔊</button></td>
-        <td>クロ</td>
-        <td>黒</td>
-      </tr>
-      <!-- Couleurs supplémentaires -->
-      <tr>
-        <td class="color-block orange">Orange</td>
-        <td>Orenji <button class="btn-listen" data-pronunciation="Orenji">🔊</button></td>
-        <td>オレンジ</td>
-        <td>橙</td>
-      </tr>
-      <tr>
-        <td class="color-block purple">Violet</td>
-        <td>Murasaki <button class="btn-listen" data-pronunciation="Murasaki">🔊</button></td>
-        <td>ムラサキ</td>
-        <td>紫</td>
-      </tr>
-      <tr>
-        <td class="color-block brown">Marron</td>
-        <td>Chairo <button class="btn-listen" data-pronunciation="Chairo">🔊</button></td>
-        <td>チャイロ</td>
-        <td>茶色</td>
-      </tr>
-      <tr>
-        <td class="color-block grey">Gris</td>
-        <td>Haiiro <button class="btn-listen" data-pronunciation="Haiiro">🔊</button></td>
-        <td>ハイイロ</td>
-        <td>灰色</td>
-      </tr>
-      <tr>
-        <td class="color-block white">Blanc</td>
-        <td>Shiro <button class="btn-listen" data-pronunciation="Shiro">🔊</button></td>
-        <td>シロ</td>
-        <td>白</td>
-      </tr>
-      <tr>
+        <!-- Fichiers CSS pour le style du site -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/couleur.css" />
+        <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a
+                        class="navbar-brand"
+                        style="width: 10%; margin: 0% !important; padding: 0%"
+                        href="./index.html"
+                        ><img
+                            style="width: 70%; margin: 0% !important"
+                            src="./assets/img/favicon.png"
+                            alt=""
+                    /></a>
+                    <!-- Menu Burger -->
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Liens de navigation -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">Les Polices</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./couleur.html">Les Couleurs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./famille.html">Les Liens de Famille</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./animaux.html">Les Animaux</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./nourriture.html">La Nourriture</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./politesse.html"
+                                    >Les formules de politesses</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./quiz.html">Quiz</a>
+                            </li>
+                            <center>
+                                <button
+                                    class="btn-install ml-2"
+                                    id="installButton"
+                                    style="display: none"
+                                >
+                                    Installer
+                                </button>
+                            </center>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- Tableau des Couleurs -->
+        <h1>Couleurs en Japonais</h1>
+        <table>
+            <tr>
+                <th>Couleur</th>
+                <th>Phonétique (Romaji)</th>
+                <th>Katakana</th>
+                <th>Kanji</th>
+            </tr>
+            <tr>
+                <td class="color-block red">Rouge</td>
+                <td>Aka <button class="btn-listen" data-pronunciation="Aka">🔊</button></td>
+                <td>アカ</td>
+                <td>赤</td>
+            </tr>
+            <tr>
+                <td class="color-block blue">Bleu</td>
+                <td>Ao <button class="btn-listen" data-pronunciation="ao">🔊</button></td>
+                <td>アオ</td>
+                <td>青</td>
+            </tr>
+            <tr>
+                <td class="color-block green">Vert</td>
+                <td>Midori <button class="btn-listen" data-pronunciation="midori">🔊</button></td>
+                <td>ミドリ</td>
+                <td>緑</td>
+            </tr>
+            <tr>
+                <td class="color-block yellow">Jaune</td>
+                <td>Ki-iro <button class="btn-listen" data-pronunciation="ki-iro">🔊</button></td>
+                <td>キイロ</td>
+                <td>黄</td>
+            </tr>
+            <tr>
+                <td class="color-block pink">Rose</td>
+                <td>Pinku <button class="btn-listen" data-pronunciation="pinku">🔊</button></td>
+                <td>ピンク</td>
+                <td>桃色</td>
+            </tr>
+            <tr>
+                <td class="color-block black">Noir</td>
+                <td>Kuro <button class="btn-listen" data-pronunciation="kuro">🔊</button></td>
+                <td>クロ</td>
+                <td>黒</td>
+            </tr>
+            <!-- Couleurs supplémentaires -->
+            <tr>
+                <td class="color-block orange">Orange</td>
+                <td>Orenji <button class="btn-listen" data-pronunciation="Orenji">🔊</button></td>
+                <td>オレンジ</td>
+                <td>橙</td>
+            </tr>
+            <tr>
+                <td class="color-block purple">Violet</td>
+                <td>
+                    Murasaki <button class="btn-listen" data-pronunciation="Murasaki">🔊</button>
+                </td>
+                <td>ムラサキ</td>
+                <td>紫</td>
+            </tr>
+            <tr>
+                <td class="color-block brown">Marron</td>
+                <td>Chairo <button class="btn-listen" data-pronunciation="Chairo">🔊</button></td>
+                <td>チャイロ</td>
+                <td>茶色</td>
+            </tr>
+            <tr>
+                <td class="color-block grey">Gris</td>
+                <td>Haiiro <button class="btn-listen" data-pronunciation="Haiiro">🔊</button></td>
+                <td>ハイイロ</td>
+                <td>灰色</td>
+            </tr>
+            <tr>
+                <td class="color-block white">Blanc</td>
+                <td>Shiro <button class="btn-listen" data-pronunciation="Shiro">🔊</button></td>
+                <td>シロ</td>
+                <td>白</td>
+            </tr>
+            <!-- <tr>
         <td class="color-block cyan">Cyan</td>
         <td>Shian <button class="btn-listen" data-pronunciation="Shian">🔊</button></td>
         <td>シアン</td>
         <td>シアン</td>
-      </tr>
-      <tr>
-        <td class="color-block magenta">Magenta</td>
-        <td>Majenta <button class="btn-listen" data-pronunciation="Majenta">🔊</button></td>
-        <td>マゼンタ</td>
-        <td>マゼンタ</td>
-      </tr>
-      <tr>
+      </tr> -->
+            <tr>
+                <td class="color-block magenta">Magenta</td>
+                <td>Majenta <button class="btn-listen" data-pronunciation="Majenta">🔊</button></td>
+                <td>マゼンタ</td>
+                <td>マゼンタ</td>
+            </tr>
+            <!-- <tr>
         <td class="color-block lime">Citron Vert</td>
         <td>Raimu <button class="btn-listen" data-pronunciation="Raimu">🔊</button></td>
         <td>ライム</td>
         <td>ライム</td>
-      </tr>
-      <tr>
+      </tr> -->
+            <!-- <tr>
         <td class="color-block teal">Sarcelle</td>
         <td>Teeru <button class="btn-listen" data-pronunciation="Teeru">🔊</button></td>
         <td>ティール</td>
         <td>ティール</td>
-      </tr>
-      <tr>
-        <td class="color-block maroon">Bordeaux</td>
-        <td>Maroon <button class="btn-listen" data-pronunciation="Maroon">🔊</button></td>
-        <td>マルーン</td>
-        <td>マルーン</td>
-      </tr>
-      <tr>
+      </tr> -->
+            <tr>
+                <td class="color-block maroon">Bordeaux</td>
+                <td>Maroon <button class="btn-listen" data-pronunciation="Marūn">🔊</button></td>
+                <td>マルーン</td>
+                <td>深紅</td>
+                <!-- Kanji pour "bordeaux" -->
+            </tr>
+            <tr>
+                <td class="color-block silver">Argent</td>
+                <td>Shirubā <button class="btn-listen" data-pronunciation="Shirubā">🔊</button></td>
+                <td>シルバー</td>
+                <td>銀</td>
+                <!-- Kanji pour "argent" -->
+            </tr>
+            <tr>
+                <td class="color-block or">Or</td>
+                <td>Gōrudo <button class="btn-listen" data-pronunciation="Gōrudo">🔊</button></td>
+                <td>ゴールド</td>
+                <td>金</td>
+                <!-- Kanji pour "or" -->
+            </tr>
+            <tr>
+                <td class="color-block turquoise">Turquoise</td>
+                <td>Tākoizu <button class="btn-listen" data-pronunciation="Tākoizu">🔊</button></td>
+                <td>ターコイズ</td>
+                <td>青緑</td>
+                <!-- Kanji pour "turquoise" -->
+            </tr>
+            <tr>
+                <td class="color-block beige">Beige</td>
+                <td>Bēju <button class="btn-listen" data-pronunciation="Bēju">🔊</button></td>
+                <td>ベージュ</td>
+                <td>薄茶色</td>
+                <!-- Kanji pour "beige" -->
+            </tr>
+            <tr>
+                <td class="color-block rouge-clair">Rouge clair</td>
+                <td>
+                    Raito Reddo
+                    <button class="btn-listen" data-pronunciation="Raito Reddo">🔊</button>
+                </td>
+                <td>ライトレッド</td>
+                <td>薄赤</td>
+                <!-- Kanji pour "rouge clair" -->
+            </tr>
+            <tr>
+                <td class="color-block bleue-fonce">Bleu foncé</td>
+                <td>
+                    Dāku Burū<button class="btn-listen" data-pronunciation="Dāku Burū">🔊</button>
+                </td>
+                <td>ダークブルー</td>
+                <td>濃青</td>
+                <!-- Kanji pour "bleu foncé" -->
+            </tr>
+            <tr>
+                <td class="color-block vert-clair">Vert clair</td>
+                <td>
+                    Raito Gurīn
+                    <button class="btn-listen" data-pronunciation="Raito Gurīn">🔊</button>
+                </td>
+                <td>ライトグリーン</td>
+                <td>薄緑</td>
+                <!-- Kanji pour "vert clair" -->
+            </tr>
+            <tr>
+                <td class="color-block blanc-casse">Blanc cassé</td>
+                <td>
+                    Ofu Howaito
+                    <button class="btn-listen" data-pronunciation="Ofu Howaito">🔊</button>
+                </td>
+                <td>オフホワイト</td>
+                <td>生成り</td>
+                <!-- Kanji pour "blanc cassé" -->
+            </tr>
+            <tr>
+                <td class="color-block rose-claire">Rose clair</td>
+                <td>
+                    Raito Pinku
+                    <button class="btn-listen" data-pronunciation="Raito Pinku">🔊</button>
+                </td>
+                <td>ライトピンク</td>
+                <td>薄桃色</td>
+                <!-- Kanji pour "rose clair" -->
+            </tr>
+            <tr>
+                <td class="color-block gris-fonce">Gris foncé</td>
+                <td>
+                    Dāku Gurē <button class="btn-listen" data-pronunciation="Dāku Gurē">🔊</button>
+                </td>
+                <td>ダークグレー</td>
+                <td>暗灰色</td>
+                <!-- Kanji pour "gris foncé" -->
+            </tr>
+            <!-- <tr>
         <td class="color-block navy">Marine</td>
         <td>Nevi <button class="btn-listen" data-pronunciation="Nevi">🔊</button></td>
         <td>ネヴィ</td>
         <td>ネヴィ</td>
-      </tr>
-      <tr>
+      </tr> -->
+            <!-- <tr>
         <td class="color-block olive">Olive</td>
         <td>Oribu <button class="btn-listen" data-pronunciation="Oribu">🔊</button></td>
         <td>オリーブ</td>
         <td>オリーブ</td>
-      </tr>
-    </table>
-  </body>
-  <style>
-    .bg-light {
-      background: transparent !important;
-    }
-    .color-block {
-      width: 10% !important;
-    }
-    table{width: 80%;}
-  </style>
-  <script src="./assets/js/script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      </tr> -->
+        </table>
+        <button onclick="scrollToTop()" id="scrollUpBtn" title="Haut de page">↑</button>
+    </body>
+    <style>
+        .bg-light {
+            background: transparent !important;
+        }
+        .color-block {
+            width: 10% !important;
+        }
+        table {
+            width: 80%;
+        }
+    </style>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/scroll-up.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>

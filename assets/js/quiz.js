@@ -64,6 +64,18 @@ const quizData = {
     { question: "Que contient un 'California roll' ?", options: ['Avocat et crabe', 'Thon et saumon'], correct: 'Avocat et crabe' },
     { question: "Que signifie 'Uramaki' ?", options: ['Sushi avec riz à l’extérieur', 'Sushi en forme de cône'], correct: 'Sushi avec riz à l’extérieur' },
   ],
+  maki: [
+    { question: "Quel ingrédient est caractéristique d'un maki avocat ?", options: ['Avocat', 'Concombre'], correct: 'Avocat' },
+    { question: "Quel type de maki contient du saumon ?", options: ['Maki saumon', 'Maki avocat'], correct: 'Maki saumon' },
+    { question: "Quel ingrédient est essentiel dans un maki concombre ?", options: ['Concombre', 'Saumon'], correct: 'Concombre' },
+    { question: "Quel type de maki contient du surimi ?", options: ['Maki surimi', 'Maki avocat'], correct: 'Maki surimi' },
+    { question: "Quel ingrédient est commun à tous les makis ?", options: ['Riz', 'Algue nori'], correct: 'Riz' },
+    { question: "Qu'est-ce qui enveloppe souvent les makis ?", options: ['Algue nori', 'Papier de riz'], correct: 'Algue nori' },
+    { question: "Quel type de maki est végétarien ?", options: ['Maki concombre', 'Maki saumon'], correct: 'Maki concombre' },
+    { question: "Le mot 'maki' signifie quoi en japonais ?", options: ['Rouler', 'Couper'], correct: 'Rouler' },
+    { question: "Comment est préparé un maki ?", options: ['Rouler dans une feuille d’algue', 'Empiler les ingrédients'], correct: 'Rouler dans une feuille d’algue' },
+    { question: "Quelle sauce accompagne souvent les makis ?", options: ['Sauce soja', 'Sauce au fromage'], correct: 'Sauce soja' },
+  ],
   
   onigiri: [
     { question: "Que signifie 'Onigiri' ?", options: ['Boulettes de riz', 'Rouleau de sushi'], correct: 'Boulettes de riz' },
@@ -233,6 +245,7 @@ function loadQuizzes() {
   document.getElementById("quiz-sushi").innerHTML = generateQuestions("sushi", "sushi");
   document.getElementById("quiz-onigiri").innerHTML = generateQuestions("onigiri", "onigiri");
   document.getElementById("quiz-sashimi").innerHTML = generateQuestions("sashimi", "sashimi");
+  document.getElementById("quiz-maki").innerHTML = generateQuestions("maki", "maki");
   document.getElementById("quiz-politesse").innerHTML = generateQuestions("politesse", "politesse");
   document.getElementById("quiz-familles").innerHTML = generateQuestions("familles", "familles");
 }

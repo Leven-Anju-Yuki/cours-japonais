@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
   </head>
-  <body>
+  <body class="quiz">
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -96,39 +96,35 @@
     <body>
         <div class="container mt-5">
           <h1 class="text-center mb-4">🎌 Quiz Japonais - Teste tes connaissances ! 🎌</h1>
-      
           <!-- Accordéon principal -->
           <div class="accordion" id="quizAccordion">
-      
             <!-- Section Animaux -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingAnimaux">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAnimaux" aria-expanded="true" aria-controls="collapseAnimaux">
-                  🐾 Quiz sur les Animaux (20 questions)
+                  🐾 Quiz sur les Animaux 
                 </button>
               </h2>
               <div id="collapseAnimaux" class="accordion-collapse collapse show" aria-labelledby="headingAnimaux" data-bs-parent="#quizAccordion">
                 <div class="accordion-body" id="quiz-animaux"></div>
               </div>
             </div>
-      
             <!-- Section Couleurs -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingCouleurs">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCouleurs" aria-expanded="false" aria-controls="collapseCouleurs">
-                  🎨 Quiz sur les Couleurs (20 questions)
+                  🎨 Quiz sur les Couleurs 
                 </button>
               </h2>
               <div id="collapseCouleurs" class="accordion-collapse collapse" aria-labelledby="headingCouleurs" data-bs-parent="#quizAccordion">
                 <div class="accordion-body" id="quiz-couleurs"></div>
               </div>
             </div>
-      
             <!-- Section Nourriture -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingNourriture">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNourriture" aria-expanded="false" aria-controls="collapseNourriture">
-                  🍣 Quiz sur la Nourriture (20 questions)
+                  🍣 Quiz sur la Nourriture 
                 </button>
               </h2>
               <div id="collapseNourriture" class="accordion-collapse collapse" aria-labelledby="headingNourriture" data-bs-parent="#quizAccordion">
@@ -138,8 +134,8 @@
                 <div class="accordion-body" id="quiz-onigiri"></div>
                 <h2>Partie sur les Sashimi</h2>
                 <div class="accordion-body" id="quiz-sashimi"></div>
-                <!-- <h2>Partie sur les maki</h2>
-                <div class="accordion-body" id="quiz-maki"></div> -->
+                <h2>Partie sur les maki</h2>
+                <div class="accordion-body" id="quiz-maki"></div>
                 <h2>🍜 Partie sur les plats principaux 🍜</h2>
                 <div class="accordion-body" id="quiz-plats"></div>
                 <h2> 🍵 Partie sur les desserts 🍵 </h2>
@@ -151,7 +147,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingPolitesse">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePolitesse" aria-expanded="false" aria-controls="collapsePolitesse">
-                  🤝 Quiz sur la Politesse (20 questions)
+                  🤝 Quiz sur la Politesse 
                 </button>
               </h2>
               <div id="collapsePolitesse" class="accordion-collapse collapse" aria-labelledby="headingPolitesse" data-bs-parent="#quizAccordion">
@@ -163,7 +159,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFamilles">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFamilles" aria-expanded="false" aria-controls="collapseFamilles">
-                  👨‍👩‍👧 Quiz sur les Familles (20 questions)
+                  👨‍👩‍👧 Quiz sur les Familles 
                 </button>
               </h2>
               <div id="collapseFamilles" class="accordion-collapse collapse" aria-labelledby="headingFamilles" data-bs-parent="#quizAccordion">
@@ -182,10 +178,13 @@
             <div id="score" class="fs-4"></div>
           </div>
         </div>
-      
+        <button onclick="scrollToTop()" id="scrollUpBtn" title="Haut de page">↑</button>
+
         <script src="./assets/js/bootstrap.min.js"></script>
         <script src="./assets/js/jquery-3.6.1.min.js"></script>
         <script src="./assets/js/quiz.js"></script>
+        <script src="./assets/js/scroll-up.js"></script>
+        <script src="./assets/js/script.js"></script>
     <style>
       .bg-light {
         background: transparent !important;
