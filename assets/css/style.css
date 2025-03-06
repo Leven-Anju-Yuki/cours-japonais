@@ -148,15 +148,16 @@ td img {
     font-size: 38px;
     border: none;
     outline: none;
-    background-color: var(--scrollup-bg-color); /* Couleur de fond */
-    color: var(--scrollup-text-color); /* Couleur du texte */
+    background-color: black; /* Couleur de fond */
+    color: rgb(212, 101, 151); /* Couleur du texte */
     cursor: pointer;
     padding: 5px;
     border-radius: 10px;
+    border: 2px solid rgb(212, 101, 151);
 }
 
 #scrollUpBtn:hover {
-    border: 2px solid var(--scrollup-hover-border-color);
-    background-color: var(--scrollup-hover-bg-color); /* Couleur de fond au survol */
+    border: 2px solid black;color: black;
+    background-color: rgb(212, 101, 151); /* Couleur de fond au survol */
 }
 /*======================================LES SCROLL-UP==============================================*/
