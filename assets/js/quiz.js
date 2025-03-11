@@ -1,28 +1,28 @@
 const quizData = {
-  animaux: [
-    { question: "Quel est le mot japonais pour 'chat' ?", options: ["Neko", "Inu"], correct: "Neko" },
-    { question: "Comment dit-on 'chien' ?", options: ["Inu", "Usagi"], correct: "Inu" },
-    { question: "Quel animal est 'Tori' ?", options: ["Oiseau", "Lapin"], correct: "Oiseau" },
-    { question: "Comment dit-on 'cheval' ?", options: ["Uma", "Hebi"], correct: "Uma" },
-    { question: "Quel animal est 'Sakana' ?", options: ["Poisson", "Tortue"], correct: "Poisson" },
-    { question: "Quel est le mot japonais pour 'lapin' ?", options: ["Usagi", "Kame"], correct: "Usagi" },
-    { question: "Comment dit-on 'tortue' ?", options: ["Kame", "Tori"], correct: "Kame" },
-    { question: "Quel est le mot pour 'serpent' ?", options: ["Hebi", "Uma"], correct: "Hebi" },
-    { question: "Comment dit-on 'souris' ?", options: ["Nezumi", "Inu"], correct: "Nezumi" },
-    { question: "Quel animal est 'Kitsune' ?", options: ["Renard", "Chat"], correct: "Renard" },
-    { question: "Quel est le mot japonais pour 'vache' ?", options: ["Ushi", "Uma"], correct: "Ushi" },
-    { question: "Comment dit-on 'singe' ?", options: ["Saru", "Kuma"], correct: "Saru" },
-    { question: "Quel animal est 'Kuma' ?", options: ["Ours", "Renard"], correct: "Ours" },
-    { question: "Quel est le mot japonais pour 'canard' ?", options: ["Ahiru", "Uma"], correct: "Ahiru" },
-    { question: "Comment dit-on 'loup' ?", options: ["Ōkami", "Kitsune"], correct: "Ōkami" },
-    { question: "Quel est le mot pour 'oiseau' ?", options: ["Tori", "Usagi"], correct: "Tori" },
-    { question: "Comment dit-on 'papillon' ?", options: ["Chō", "Uma"], correct: "Chō" },
-    { question: "Quel animal est 'Kaeru' ?", options: ["Grenouille", "Tortue"], correct: "Grenouille" },
-    { question: "Comment dit-on 'cochon' ?", options: ["Buta", "Kame"], correct: "Buta" },
-    { question: "Comment dit-on 'panda' ?", options: ["Panda", "Uma"], correct: "Panda" },
-
-    { question: "Quel est le mot japonais pour 'lion' ?", options: ["Raion", "Uma"], correct: "Raion" },
-    { question: "Comment dit-on 'poisson rouge' ?", options: ["Kingyo", "Sakana"], correct: "Kingyo" },
+  animaux:[
+    { question: "Quel est le mot japonais pour 'chat' ?", options: ["Neko", "Inu", "Usagi"], correct: "Neko" },
+    { question: "Comment dit-on 'chien' ?", options: ["Inu", "Usagi", "Kitsune"], correct: "Inu" },
+    { question: "Quel animal est 'Tori' ?", options: ["Oiseau", "Lapin", "Poisson"], correct: "Oiseau" },
+    { question: "Comment dit-on 'cheval' ?", options: ["Uma", "Hebi", "Buta"], correct: "Uma" },
+    { question: "Quel animal est 'Sakana' ?", options: ["Poisson", "Tortue", "Chat"], correct: "Poisson" },
+    { question: "Quel est le mot japonais pour 'lapin' ?", options: ["Usagi", "Kame", "Tori"], correct: "Usagi" },
+    { question: "Comment dit-on 'tortue' ?", options: ["Kame", "Tori", "Usagi"], correct: "Kame" },
+    { question: "Quel est le mot pour 'serpent' ?", options: ["Hebi", "Uma", "Saru"], correct: "Hebi" },
+    { question: "Comment dit-on 'souris' ?", options: ["Nezumi", "Inu", "Tori"], correct: "Nezumi" },
+    { question: "Quel animal est 'Kitsune' ?", options: ["Renard", "Chat", "Loup"], correct: "Renard" },
+    { question: "Quel est le mot japonais pour 'vache' ?", options: ["Ushi", "Uma", "Saru"], correct: "Ushi" },
+    { question: "Comment dit-on 'singe' ?", options: ["Saru", "Kuma", "Raion"], correct: "Saru" },
+    { question: "Quel animal est 'Kuma' ?", options: ["Ours", "Renard", "Lion"], correct: "Ours" },
+    { question: "Quel est le mot japonais pour 'canard' ?", options: ["Ahiru", "Uma", "Nezumi"], correct: "Ahiru" },
+    { question: "Comment dit-on 'loup' ?", options: ["Ōkami", "Kitsune", "Raion"], correct: "Ōkami" },
+    { question: "Quel est le mot pour 'oiseau' ?", options: ["Tori", "Usagi", "Sakana"], correct: "Tori" },
+    { question: "Comment dit-on 'papillon' ?", options: ["Chō", "Uma", "Hebi"], correct: "Chō" },
+    { question: "Quel animal est 'Kaeru' ?", options: ["Grenouille", "Tortue", "Poisson"], correct: "Grenouille" },
+    { question: "Comment dit-on 'cochon' ?", options: ["Buta", "Kame", "Saru"], correct: "Buta" },
+    { question: "Comment dit-on 'panda' ?", options: ["Panda", "Uma", "Tori"], correct: "Panda" },
+  
+    { question: "Quel est le mot japonais pour 'lion' ?", options: ["Raion", "Uma", "Tori"], correct: "Raion" },
+    { question: "Comment dit-on 'poisson rouge' ?", options: ["Kingyo", "Sakana", "Tori"], correct: "Kingyo" },
   ],
 
   couleurs: [
@@ -231,7 +231,7 @@ function generateQuestions(section, id) {
         <button class="btn btn-outline-primary" onclick="checkAnswer('${q.correct}', '${id + index}', '${section}')">${
       q.options[1]
     }</button>
-        <div id="result-${id + index}" class="mt-2"></div>
+        <div id="result-${id + index}" class="mt-3"></div>
       `;
   });
   return html;
@@ -271,5 +271,29 @@ function updateScore() {
     "score"
   ).innerText = `Tu as répondu correctement à ${correctAnswers}/${totalQuestions} questions (${score}%).`;
 }
+// Fonction pour obtenir une question aléatoire avec une option supplémentaire
+function getRandomQuestion(category) {
+  const categoryData = quizData[category];
+  const randomIndex = Math.floor(Math.random() * categoryData.length);
+  const randomQuestion = categoryData[randomIndex];
 
+  // Ajouter une option supplémentaire qui est incorrecte
+  const incorrectOptions = categoryData
+    .filter((question) => question.correct !== randomQuestion.correct)
+    .map((question) => question.correct);
+
+  const randomIncorrect = incorrectOptions[Math.floor(Math.random() * incorrectOptions.length)];
+
+  // Ajouter l'option incorrecte à l'array options
+  const extendedOptions = [...randomQuestion.options, randomIncorrect];
+
+  // Mélanger les options pour que l'option incorrecte soit à une position aléatoire
+  const shuffledOptions = extendedOptions.sort(() => Math.random() - 0.5);
+
+  return {
+    question: randomQuestion.question,
+    options: shuffledOptions,
+    correct: randomQuestion.correct,
+  };
+}
 window.onload = loadQuizzes;
