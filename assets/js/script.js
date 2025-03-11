@@ -28,6 +28,17 @@ if ("speechSynthesis" in window) {
     audioContext.close();
     return isMuted;
   }
+  // window.addEventListener("scroll", function () {
+  //   let menu = document.querySelector(".section_icone_btn");
+  //   let position = menu.offsetTop;
+
+  //   if (window.scrollY > position) {
+  //     menu.style.position = "fixed";
+  //     menu.style.top = "0";
+  //   } else {
+  //     menu.style.position = "relative";
+  //   }
+  // });
 
   // Fonction pour lire un texte en japonais
   function speak(text) {
